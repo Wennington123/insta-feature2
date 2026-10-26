@@ -54,11 +54,10 @@ function buildSlideSvg(input: {
   slide: Slide;
   index: number;
   total: number;
-  post: Post;
   brand: Brand;
   logo: string | null;
 }): { svg: string; warnings: string[] } {
-  const { slide, index, total, post, brand, logo } = input;
+  const { slide, index, total, brand, logo } = input;
   const kind = slide.kind ?? (index === 0 ? 'cover' : index === total - 1 ? 'cta' : 'content');
   const bg = solid(brand.bg, '#FFFFFF');
   const fg = solid(brand.fg, '#0B1220');
@@ -98,6 +97,11 @@ function buildSlideSvg(input: {
         spacing: 4,
       })
     : '';
+
+  const logoOnCover =
+    isCover && logo
+      ? `<image x="${WIDTH - PAD - 220}" y="${PAD - 32}" width="220" height="220" href="${logo}" preserveAspectRatio="xMidYMid meet"/>`
+      : '';
 
   const logoOnCta =
     isCta && logo
@@ -160,10 +164,6 @@ function buildSlideSvg(input: {
     lineHeight: 34,
   });
 
-  const aiNote = post.is_ai_generated
-    ? `<text x="${WIDTH - PAD}" y="80" text-anchor="end" font-family="${xmlEscape(font)}" font-size="20" font-weight="400" fill="${muted}">conteudo gerado com apoio de IA</text>`
-    : '';
-
   const ctaLabel = isCta
     ? `<rect x="${PAD}" y="${HEIGHT - PAD - 160}" width="340" height="76" rx="38" fill="${accent}"/>` +
       textBlock(['Fale comigo'], {
@@ -182,13 +182,13 @@ function buildSlideSvg(input: {
   <rect width="${WIDTH}" height="${HEIGHT}" fill="${bg}"/>
   ${corner}
   ${cornerBottom}
+  ${logoOnCover}
   ${eyebrowSvg}
   ${logoOnCta}
   ${headingSvg}
   ${accentBar}
   ${bodySvg}
   ${ctaLabel}
-  ${aiNote}
   ${handleSvg}
   ${pageSvg}
 </svg>`,
@@ -219,7 +219,6 @@ export async function renderPost(post: Post, brand: Brand): Promise<RenderResult
       slide: slides[index] as Slide,
       index,
       total: slides.length,
-      post,
       brand,
       logo,
     });
