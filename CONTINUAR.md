@@ -16,7 +16,7 @@ Se nao tiver Node:
 
 - Windows: `winget install OpenJS.NodeJS.LTS`
 - Linux (Debian/Ubuntu): `curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs`
-- Ou use o Node portatil que ja existe neste notebook em `Desktop\cursos_pcf\.tooling\node-v24.21.0-win-x64`.
+- Ou use um Node portatil ja instalado no seu ambiente (ajuste o caminho).
 
 ## 2. Credenciais (so nesta maquina)
 

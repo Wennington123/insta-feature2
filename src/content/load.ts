@@ -66,7 +66,9 @@ export function captionHash(caption: string): string {
 }
 
 export function machineId(): string {
-  return process.env.IG_MACHINE?.trim() || hostname();
+  const explicit = process.env.IG_MACHINE?.trim();
+  if (explicit) return explicit;
+  return `host-${createHash('sha256').update(hostname()).digest('hex').slice(0, 8)}`;
 }
 
 export async function readPublished(): Promise<PublishedRecord[]> {
