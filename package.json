@@ -1,0 +1,31 @@
+{
+  "name": "insta-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agente de conteudo e CLI de publicacao para Instagram (@w_tec)",
+  "type": "module",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "bin": {
+    "ig": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "node --import tsx src/cli.ts",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "esbuild@0.28.2": true
+  }
+}

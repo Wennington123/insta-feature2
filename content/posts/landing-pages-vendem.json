@@ -1,0 +1,65 @@
+{
+  "slug": "landing-pages-vendem",
+  "type": "carousel",
+  "status": "draft",
+  "caption": "Seu site recebe visitas, mas não vende?\n\nNa maioria dos casos, o problema não é o tráfego. É a página.\n\nLanding page é uma página única, com um objetivo só: fazer a pessoa comprar, agendar ou pedir orçamento. Sem menu, sem distração, sem botão que leva para lugar nenhum.\n\nE isso muda o resultado:\n\n• A conversão mediana de landing pages é 6,6% (Unbounce, 2024 — 41 mil páginas e 57 milhões de conversões analisadas).\n• Tráfego vindo do Instagram converte, em média, 17,9%.\n• O desktop ainda converte 8% melhor que o mobile, mesmo com 83% das visitas vindo do celular.\n• Texto simples, no nível de leitura da 5ª-7ª série, converte 56% mais que textos mais complexos.\n\nTraduzindo: com 1.000 visitas, 2% de conversão são 20 contatos. Com 6,6%, são 66. O mesmo tráfego, três vezes mais oportunidades.\n\nSe o seu site é bonito, mas não gera pedido, o que falta é uma página feita para converter.\n\nEu desenho, escrevo e publico landing pages para negócios que querem transformar visita em venda. Me chama no direct.\n\nFontes: Unbounce Conversion Benchmark Report 2024 (41 mil landing pages, 57 milhões de conversões), divulgado por Search Engine Journal em out/2025.\n\n#landingpage #conversao #marketingdigital #sitesquevendem #wtec #desenvolvimentoweb #pequenosnegocios #trafegopago",
+  "alt_text": "Carrossel de 9 slides da W-Tec explicando o que é uma landing page, com quatro dados do relatório da Unbounce 2024 sobre conversão, tráfego do Instagram, mobile e clareza de texto, e um convite para falar no direct.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "kind": "cover",
+      "eyebrow": "LANDING PAGES",
+      "heading": "Seu site recebe visitas e não vende?",
+      "body": "O problema pode ser a página, não o tráfego."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "O QUE É",
+      "heading": "Landing page não é site",
+      "body": "É uma página única, com um objetivo só: comprar, agendar ou pedir orçamento."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "COMO FUNCIONA",
+      "heading": "Uma decisão por tela",
+      "body": "Sem menu e sem distração: promessa clara, prova e um botão. Cada bloco existe para tirar uma dúvida."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "DADO 1",
+      "heading": "6,6% é a conversão mediana",
+      "body": "41 mil landing pages e 57 milhões de conversões analisadas pela Unbounce em 2024."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "DADO 2",
+      "heading": "Instagram converte 17,9%",
+      "body": "Média de conversão do tráfego vindo do Instagram em landing pages, segundo a mesma análise."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "DADO 3",
+      "heading": "Mobile: 83% das visitas, menos conversão",
+      "body": "O desktop ainda converte 8% melhor. Página lenta no celular derruba o resultado."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "DADO 4",
+      "heading": "Frase simples converte 56% mais",
+      "body": "Texto no nível de leitura da 5ª-7ª série converte 56% mais que textos mais complexos (Unbounce, 2024)."
+    },
+    {
+      "kind": "content",
+      "eyebrow": "COMO AUMENTA VENDAS",
+      "heading": "Mesmo tráfego, mais pedidos",
+      "body": "Exemplo com 1.000 visitas: 2% = 20 contatos. 6,6% = 66. Conversão é alavanca, não sorte."
+    },
+    {
+      "kind": "cta",
+      "heading": "Quer uma landing page que vende?",
+      "body": "Eu desenho, escrevo e publico. Me chama no direct."
+    }
+  ],
+  "media": [],
+  "notes": "Fontes: Unbounce Conversion Benchmark Report 2024 (41.000 landing pages, 57 milhões de conversões), via Search Engine Journal, 03/10/2025: https://www.searchenginejournal.com/new-report-reveals-an-8-mobile-landing-page-conversion-gap/557513/"
+}

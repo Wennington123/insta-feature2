@@ -1,0 +1,14 @@
+# segredos
+.env
+.env.*
+!.env.example
+
+# build / dependencias
+node_modules/
+dist/
+out/
+
+# estado local
+content/.due.lock
+.commandcode/
+*.log
