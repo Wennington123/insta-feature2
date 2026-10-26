@@ -2,6 +2,9 @@
 
 Agente que **cria o conteudo** da conta `@w_tec` e CLI que **valida, pre-visualiza e publica** via API oficial da Meta. Funciona igual em Windows e Linux; conteudo e historico sincronizam pelo GitHub, segredos ficam so na maquina.
 
+> Repositorio: https://github.com/Wennington123/insta-feature2
+> Continuando em outro notebook? Siga o [CONTINUAR.md](./CONTINUAR.md).
+
 ```
 conteudo (JSON) → render (JPEG) → validate → preview → publish → API da Meta
 ```
