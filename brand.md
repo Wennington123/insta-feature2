@@ -5,7 +5,7 @@
 ## Identidade
 
 - Nome: W-Tec
-- Handle: @w_tec
+- Handle: @w.tec_digital
 - Link da bio: (preencher)
 - Nicho: tecnologia
 - Publico: (preencher — ex.: pequenos negocios, devs iniciantes, profissionais de TI)
@@ -33,7 +33,7 @@ fg: #0B1220
 accent: #0578F5
 muted: #5B6B80
 font: Arial
-handle: @w_tec
+handle: @w.tec_digital
 logo: logo_wtec.jpg
 
 ## Hashtags
