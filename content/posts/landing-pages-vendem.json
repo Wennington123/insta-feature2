@@ -1,7 +1,7 @@
 {
   "slug": "landing-pages-vendem",
   "type": "carousel",
-  "status": "draft",
+  "status": "ready",
   "caption": "Seu site recebe visitas, mas não vende?\n\nNa maioria dos casos, o problema não é o tráfego. É a página.\n\nLanding page é uma página única, com um objetivo só: fazer a pessoa comprar, agendar ou pedir orçamento. Sem menu, sem distração, sem botão que leva para lugar nenhum.\n\nE isso muda o resultado:\n\n• A conversão mediana de landing pages é 6,6% (Unbounce, 2024 — 41 mil páginas e 57 milhões de conversões analisadas).\n• Tráfego vindo do Instagram converte, em média, 17,9%.\n• O desktop ainda converte 8% melhor que o mobile, mesmo com 83% das visitas vindo do celular.\n• Texto simples, no nível de leitura da 5ª-7ª série, converte 56% mais que textos mais complexos.\n\nTraduzindo: com 1.000 visitas, 2% de conversão são 20 contatos. Com 6,6%, são 66. O mesmo tráfego, três vezes mais oportunidades.\n\nSe o seu site é bonito, mas não gera pedido, o que falta é uma página feita para converter.\n\nEu desenho, escrevo e publico landing pages para negócios que querem transformar visita em venda. Me chama no direct.\n\nFontes: Unbounce Conversion Benchmark Report 2024 (41 mil landing pages, 57 milhões de conversões), divulgado por Search Engine Journal em out/2025.\n\n#landingpage #conversao #marketingdigital #sitesquevendem #wtec #desenvolvimentoweb #pequenosnegocios #trafegopago",
   "alt_text": "Carrossel de 9 slides da W-Tec explicando o que é uma landing page, com quatro dados do relatório da Unbounce 2024 sobre conversão, tráfego do Instagram, mobile e clareza de texto, e um convite para falar no direct.",
   "is_ai_generated": true,
@@ -60,6 +60,16 @@
       "body": "Eu desenho, escrevo e publico. Me chama no direct."
     }
   ],
-  "media": [],
+  "media": [
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-01.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-02.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-03.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-04.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-05.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-06.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-07.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-08.jpg",
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/assets/landing-pages-vendem/slide-09.jpg"
+  ],
   "notes": "Fontes: Unbounce Conversion Benchmark Report 2024 (41.000 landing pages, 57 milhões de conversões), via Search Engine Journal, 03/10/2025: https://www.searchenginejournal.com/new-report-reveals-an-8-mobile-landing-page-conversion-gap/557513/"
 }
