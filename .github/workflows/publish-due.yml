@@ -1,0 +1,50 @@
+name: Publicar agendados
+
+on:
+  schedule:
+    # Quinta 16:00 em America/Recife (UTC-3) = 19:00 UTC
+    - cron: '0 19 * * 4'
+    # Fallback: se o GitHub atrasar a primeira execucao
+    - cron: '15 19 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-due
+  cancel-in-progress: false
+
+jobs:
+  due:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --include=dev
+      - run: npm run build
+
+      - name: Publicar agendados
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_API_VERSION: v26.0
+          IG_MACHINE: github-actions
+        run: node dist/cli.js due
+
+      - name: Commitar estado
+        run: |
+          if [ -z "$(git status --porcelain content/published.jsonl content/posts)" ]; then
+            echo "Nada para commitar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/published.jsonl content/posts
+          git commit -m "chore(content): publica agendados"
+          git push
