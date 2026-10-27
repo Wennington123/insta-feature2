@@ -21,6 +21,7 @@ import * as render from './commands/render.js';
 import * as skill from './commands/skill.js';
 import * as status from './commands/status.js';
 import * as validate from './commands/validate.js';
+import * as zernio from './commands/zernio.js';
 
 const HELP = `ig — agente de conteudo e publicacao para Instagram (@w_tec)
 
@@ -39,11 +40,14 @@ Publicacao
     --no-publish             cria e valida o container sem postar
     --force                  permite republicar um slug ja publicado
     --skip-media-check       pula a verificacao das URLs publicas
+    --via meta|zernio        escolhe o provedor (padrao: PUBLISH_PROVIDER ou meta)
+    --account <id>           conta do Zernio (padrao: ZERNIO_ACCOUNT_ID)
   due                        publica agendados vencidos
     --at <ISO>               simula outro horario
     --tolerance <min>        antecipa posts em N minutos
     --sync                   git pull antes e commit/push depois
     --dry-run                lista o que seria publicado
+    --via meta|zernio        escolhe o provedor
   limit                      cota de publicacao nas ultimas 24h
   doctor                     diagnostico de ambiente, token, conta e midias
 
@@ -55,6 +59,13 @@ Setup
   media url <arquivo>        monta a URL publica (--check valida)
   media check <url>          testa se a Meta consegue baixar a midia
   skill install | skill path instala a skill no agente / mostra caminhos
+
+Zernio (publicacao sem app Meta)
+  zernio connect [--write]   cria perfil, abre o OAuth do Instagram e grava a conta
+  zernio accounts            lista as contas conectadas
+  zernio check               valida a ZERNIO_API_KEY
+  zernio publish <slug>      atalho para publish --via zernio
+  zernio due                 atalho para due --via zernio
 
 Exemplos
   ig render landing-pages-vendem
@@ -72,6 +83,9 @@ const OPTIONS = {
   'skip-media-check': { type: 'boolean' },
   offline: { type: 'boolean' },
   all: { type: 'boolean' },
+  via: { type: 'string' },
+  account: { type: 'string' },
+  profile: { type: 'string' },
   'no-open': { type: 'boolean' },
   write: { type: 'boolean' },
   sync: { type: 'boolean' },
@@ -131,6 +145,8 @@ export async function main(argv: string[]): Promise<number> {
       return auth.run(ctx);
     case 'media':
       return media.run(ctx);
+    case 'zernio':
+      return zernio.run(ctx);
     case 'skill':
       return skill.run(ctx);
     default:

@@ -1,7 +1,8 @@
 import { existsSync } from 'node:fs';
 
 import { AppError } from '../errors.js';
-import { hasConfig, loadEnv, readConfigSafe } from '../config.js';
+import { hasConfig, hasZernioConfig, loadEnv, readConfigSafe, readZernioConfig } from '../config.js';
+import { ZernioClient } from '../providers/zernio.js';
 import { listPosts } from '../content/load.js';
 import { checkPublishingLimit, getMe } from '../graph/media.js';
 import { GraphClient } from '../graph/client.js';
@@ -11,6 +12,35 @@ import { checkPublicMedia, expectedKind } from '../media/check.js';
 import type { CommandContext } from './util.js';
 
 const MIN_NODE_MAJOR = 20;
+
+async function checkZernio(): Promise<number> {
+  heading('Zernio');
+  try {
+    const config = readZernioConfig();
+    const client = new ZernioClient({ apiKey: config.apiKey, baseUrl: config.baseUrl });
+    const accounts = await client.listAccounts();
+
+    ok(`ZERNIO_API_KEY valida; ${accounts.length} conta(s) conectada(s).`);
+    for (const account of accounts) {
+      bullet(account.platform, account.username ? `@${account.username}` : account._id);
+    }
+
+    const instagram = accounts.find((account) => account.platform === 'instagram');
+    if (!instagram) {
+      warn('Nenhuma conta do Instagram conectada; rode `ig zernio connect --write`.');
+    } else if (!config.accountId) {
+      warn(`ZERNIO_ACCOUNT_ID ausente; use ${instagram._id} ou rode \`ig zernio connect --write\`.`);
+    } else {
+      bullet('conta atual', config.accountId);
+    }
+
+    ok('Tudo pronto para publicar via Zernio.');
+    return 0;
+  } catch (err) {
+    error((err as Error).message);
+    return 1;
+  }
+}
 
 export async function run(_ctx: CommandContext): Promise<number> {
   loadEnv();
@@ -31,6 +61,9 @@ export async function run(_ctx: CommandContext): Promise<number> {
 
   const config = readConfigSafe();
   if (!config) {
+    if (hasZernioConfig()) {
+      return await checkZernio();
+    }
     error('Credenciais ausentes.');
     info('  1. Copie .env.example para .env');
     info('  2. Rode `ig auth set <user_id> <token>` ou edite o .env');

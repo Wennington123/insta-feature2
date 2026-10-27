@@ -96,7 +96,7 @@ function printDryRun(post: Post, client: GraphClient): void {
   info('\nCada container sera consultado ate status_code=FINISHED antes de publicar.');
 }
 
-async function preflightMedia(post: Post): Promise<void> {
+export async function preflightMedia(post: Post): Promise<void> {
   const media = post.media ?? [];
   const problems: string[] = [];
 

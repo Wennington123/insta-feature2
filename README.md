@@ -35,6 +35,18 @@ ig auth check --write             # mostra a conta e grava o IG_USER_ID
 
 > O `user_id` retornado por `/me?fields=user_id,username` e o mesmo usado em `/<IG_ID>/media`.
 
+### Alternativa: publicar via Zernio (sem app Meta)
+
+Se voce nao quiser criar app, pedir Advanced Access ou lidar com token da Meta, o Zernio publica com o app aprovado dele. O @w_tec precisa ser Business/Creator; nao precisa de Pagina do Facebook.
+
+1. Crie a conta em [zernio.com](https://zernio.com) e uma chave em [API keys](https://zernio.com/dashboard/api-keys).
+2. No `.env`: `ZERNIO_API_KEY=sk_...` (e, se quiser, `PUBLISH_PROVIDER=zernio`).
+3. Rode `node dist/cli.js zernio connect --write`. Ele cria o perfil, abre o OAuth do Instagram e grava `ZERNIO_ACCOUNT_ID`.
+4. Confira com `node dist/cli.js zernio accounts`.
+5. Publique com `node dist/cli.js publish <slug> --via zernio` (ou `ig zernio publish <slug>`).
+
+`--dry-run` mostra o payload sem chamar a API e `--no-publish` cria um rascunho no Zernio. `ig zernio due` publica os agendados pelo Zernio. O plano gratuito cobre 2 contas com posts ilimitados.
+
 ## 2. Instalar
 
 ```bash

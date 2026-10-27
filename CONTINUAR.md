@@ -43,6 +43,23 @@ node dist/cli.js doctor
 
 > Nunca commite `.env`. Ele ja esta no `.gitignore`. Quem tem o token publica e apaga posts.
 
+## 2.1 Alternativa sem app Meta: Zernio
+
+Se nao quiser criar app nem passar por verificacao/review da Meta:
+
+```bash
+# .env
+ZERNIO_API_KEY=sk_...
+# PUBLISH_PROVIDER=zernio   # opcional, deixa publish/due usando Zernio por padrao
+
+node dist/cli.js zernio connect --write   # cria perfil, abre OAuth do @w_tec e grava ZERNIO_ACCOUNT_ID
+node dist/cli.js zernio accounts
+node dist/cli.js publish landing-pages-vendem --via zernio --dry-run
+node dist/cli.js publish landing-pages-vendem --via zernio
+```
+
+O @w_tec precisa ser conta Business/Creator; nao precisa de Pagina do Facebook. O plano gratuito do Zernio cobre 2 contas com posts ilimitados. `ig zernio due` publica os agendados pelo mesmo caminho.
+
 ## 3. Publicar o carrossel que ja existe
 
 O post esta em `content/posts/landing-pages-vendem.json` e os JPEGs em `content/assets/landing-pages-vendem/`.

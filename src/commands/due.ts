@@ -2,8 +2,10 @@ import { spawnSync } from 'node:child_process';
 import { readFile, unlink, writeFile } from 'node:fs/promises';
 
 import { AppError } from '../errors.js';
+import { loadEnv, readZernioConfig } from '../config.js';
 import { machineId, listPosts, readPublished, selectDue } from '../content/load.js';
 import { publishPost } from '../core/publish.js';
+import { ZernioClient, publishViaZernio } from '../providers/zernio.js';
 import { lockFile, repoRoot } from '../paths.js';
 import { c, error, heading, info, ok, step, warn } from '../log.js';
 import type { CommandContext } from './util.js';
@@ -56,8 +58,10 @@ function minutesFrom(value: string | undefined, fallback = 0): number {
 }
 
 export async function run(ctx: CommandContext): Promise<number> {
+  loadEnv();
   const dryRun = flag(ctx, 'dry-run');
   const sync = flag(ctx, 'sync');
+  const provider = option(ctx, 'via') ?? process.env.PUBLISH_PROVIDER ?? 'meta';
   const atOption = option(ctx, 'at');
   const now = atOption ? new Date(atOption) : new Date();
   if (Number.isNaN(now.getTime())) throw new AppError('--at invalido; use ISO 8601.');
@@ -94,20 +98,48 @@ export async function run(ctx: CommandContext): Promise<number> {
       return 0;
     }
 
-    const client = createClient();
     let failures = 0;
-    for (const post of due) {
-      try {
-        step(`Publicando ${post.slug}...`);
-        const outcome = await publishPost(post, client, { yes: true });
-        if (outcome.status === 'published') {
-          ok(`${post.slug} publicado (media_id=${outcome.mediaId})`);
-          if (outcome.permalink) console.log(`  ${c.cyan(outcome.permalink)}`);
-        }
-      } catch (err) {
-        failures += 1;
-        error(`${post.slug}: ${(err as Error).message}`);
+    if (provider === 'zernio') {
+      const config = readZernioConfig();
+      const accountId = option(ctx, 'account') ?? config.accountId;
+      if (!accountId) {
+        throw new AppError('ZERNIO_ACCOUNT_ID nao configurado.', {
+          hint: 'Rode `ig zernio connect --write` ou defina ZERNIO_ACCOUNT_ID no .env.',
+        });
       }
+      const zernio = new ZernioClient({ apiKey: config.apiKey, baseUrl: config.baseUrl });
+      for (const post of due) {
+        try {
+          step(`Publicando ${post.slug} via Zernio...`);
+          const outcome = await publishViaZernio(post, { client: zernio, accountId, yes: true });
+          if (outcome.status === 'published') {
+            ok(`${post.slug} publicado (post_id=${outcome.postId})`);
+            if (outcome.url) console.log(`  ${c.cyan(outcome.url)}`);
+          }
+        } catch (err) {
+          failures += 1;
+          error(`${post.slug}: ${(err as Error).message}`);
+        }
+      }
+    } else if (provider === 'meta') {
+      const client = createClient();
+      for (const post of due) {
+        try {
+          step(`Publicando ${post.slug}...`);
+          const outcome = await publishPost(post, client, { yes: true });
+          if (outcome.status === 'published') {
+            ok(`${post.slug} publicado (media_id=${outcome.mediaId})`);
+            if (outcome.permalink) console.log(`  ${c.cyan(outcome.permalink)}`);
+          }
+        } catch (err) {
+          failures += 1;
+          error(`${post.slug}: ${(err as Error).message}`);
+        }
+      }
+    } else {
+      throw new AppError(`Provedor desconhecido: ${provider}`, {
+        hint: 'Use --via meta ou --via zernio, ou defina PUBLISH_PROVIDER no .env.',
+      });
     }
 
     if (sync && failures === 0) {

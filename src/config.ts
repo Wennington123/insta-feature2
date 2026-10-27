@@ -11,6 +11,13 @@ export interface Config {
   machine?: string;
 }
 
+export interface ZernioConfig {
+  apiKey: string;
+  baseUrl: string;
+  accountId?: string;
+  profileId?: string;
+}
+
 type RawConfig = Record<string, string | undefined>;
 
 let envLoaded = false;
@@ -92,4 +99,29 @@ export function readConfigSafe(): Config | undefined {
   } catch {
     return undefined;
   }
+}
+
+export function hasZernioConfig(): boolean {
+  loadEnv();
+  return Boolean(process.env.ZERNIO_API_KEY);
+}
+
+export function readZernioConfig(): ZernioConfig {
+  loadEnv();
+  const fallback = readUserConfig();
+  const get = (key: string): string | undefined => process.env[key] ?? fallback[key];
+  const apiKey = get('ZERNIO_API_KEY');
+
+  if (!apiKey) {
+    throw new AppError('ZERNIO_API_KEY nao configurado.', {
+      hint: 'Crie uma chave em https://zernio.com/dashboard/api-keys e cole em .env como ZERNIO_API_KEY=sk_...',
+    });
+  }
+
+  return {
+    apiKey,
+    baseUrl: get('ZERNIO_BASE_URL') ?? 'https://zernio.com/api/v1',
+    accountId: get('ZERNIO_ACCOUNT_ID') || undefined,
+    profileId: get('ZERNIO_PROFILE_ID') || undefined,
+  };
 }
