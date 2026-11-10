@@ -1,0 +1,23 @@
+name: Deletar mídia do Instagram
+on:
+  workflow_dispatch:
+    inputs:
+      media_id:
+        description: 'media_id do post/reel a deletar'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DELETE /media
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          echo "Deletando media ${{ inputs.media_id }}..."
+          curl -s -X DELETE \
+            "https://graph.instagram.com/v26.0/${{ inputs.media_id }}?access_token=${IG_ACCESS_TOKEN}"
+          echo ""
