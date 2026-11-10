@@ -1,0 +1,13 @@
+{
+  "slug": "notebook-lento-reel",
+  "type": "reels",
+  "status": "scheduled",
+  "scheduled_for": "2026-11-10T20:40:00-03:00",
+  "caption": "Seu notebook tá lento? Antes de comprar peça, diagnostica.\n\nNa maioria dos casos a lentidão nem é hardware: inicialização cheia, disco lotado, apps rodando em segundo plano e poeira no cooler. Uma otimização bem feita devolve o desempenho — e quando a peça realmente precisa trocar, o diagnóstico aponta o que, sem gasto desnecessário.\n\nMe manda o modelo do notebook e o sintoma no direct. Diagnóstico gratuito, eu digo se dá pra recuperar antes de você gastar.\n\nAtendemos Petrolina e região.\nWhatsApp: (74) 98821-7793\n\n#notebooklento #manutencaodepc #otimizacaodepc #suportetecnico #petrolina #juazeiro #informatica #wtec",
+  "alt_text": "Reel da W-Tec mostrando um terminal executando um diagnóstico de notebook lento com quatro problemas encontrados, a lista dos quatro vilões da lentidão com ícones, uma barra de tempo de boot caindo de 180 para 45 segundos e o botão Fale comigo no WhatsApp.",
+  "is_ai_generated": false,
+  "media": [
+    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/reels/notebook-lento-reel.mp4"
+  ],
+  "notes": "Reel gerado com a stack FOSS documentada em WORKFLOW.md (VHS + Manim + Matplotlib + FFmpeg, trilha CC0 acid-detective, SFX Kenney CC0). Ads serão impulsionados manualmente pelo usuário."
+}

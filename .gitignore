@@ -12,3 +12,11 @@ out/
 content/.due.lock
 .commandcode/
 *.log
+
+# venvs e outputs de render
+.venv-*/
+content/reels/ads/teste-pipeline/media/
+content/reels/ads/teste-pipeline/_video.mp4
+content/reels/ads/teste-pipeline/_audio.m4a
+content/reels/ads/teste-pipeline/hook-fast.mp4
+content/reels/ads/teste-pipeline/boot.mp4

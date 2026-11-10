@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+echo ""
+echo -e "  \e[96m->\e[0m \e[1;97mboot:\e[0m 47 apps na inicialização"
+sleep 0.45
+echo -e "  \e[96m->\e[0m \e[1;97mdisco:\e[0m 98% cheio"
+sleep 0.45
+echo -e "  \e[96m->\e[0m \e[1;97mtemperatura:\e[0m 89°C"
+sleep 0.45
+echo -e "  \e[91m!!\e[0m \e[1;91m4 problemas encontrados\e[0m"
+sleep 1.0
