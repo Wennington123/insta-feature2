@@ -7,7 +7,7 @@
   "alt_text": "Reel da W-Tec mostrando um terminal executando um diagnóstico de notebook lento com quatro problemas encontrados, a lista dos quatro vilões da lentidão com ícones, uma barra de tempo de boot caindo de 180 para 45 segundos e o botão Fale comigo no WhatsApp.",
   "is_ai_generated": false,
   "media": [
-    "https://raw.githubusercontent.com/Wennington123/insta-feature2/main/content/reels/notebook-lento-reel.mp4"
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/notebook-lento-reel.mp4"
   ],
   "notes": "Reel gerado com a stack FOSS documentada em WORKFLOW.md (VHS + Manim + Matplotlib + FFmpeg, trilha CC0 acid-detective, SFX Kenney CC0). Ads serão impulsionados manualmente pelo usuário."
 }
