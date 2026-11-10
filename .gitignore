@@ -10,7 +10,12 @@ out/
 
 # estado local
 content/.due.lock
-.commandcode/
+.commandcode/*
+!.commandcode/skills/
+.commandcode/skills/*
+!wtec-visual
+.commandcode/skills/wtec-visual/*
+!.commandcode/skills/wtec-visual/SKILL.md
 *.log
 
 # venvs e outputs de render
