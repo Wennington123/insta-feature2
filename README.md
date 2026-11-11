@@ -1,6 +1,22 @@
 # W-Tec · agente de Instagram
 
-Agente que **cria o conteudo** da conta `@w_tec` e CLI que **valida, pre-visualiza e publica** via API oficial da Meta. Funciona igual em Windows e Linux; conteudo e historico sincronizam pelo GitHub, segredos ficam so na maquina.
+Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre-visualiza e publica** via API oficial da Meta. Funciona igual em Windows e Linux; conteudo e historico sincronizam pelo GitHub, segredos ficam so na maquina.
+
+## Estado atual (atualizado em 2026-11-11)
+
+- **Ultima publicacao:** `superaquecimento-notebook` (post de imagem unica, cria A) — `media_id=18100550657407752`. O plano: rodar **ads manualmente** no Gerenciador promovendo/criando anuncio com essa imagem.
+- **Crias B e C guardadas** em `content/ads/estaticos/` (`cria-b-notebook-lento`, `cria-c-celular`) para teste A/B/C de mensagem em ads depois. Layout identico, muda a dor. Para re-renderizar:
+  ```bash
+  agent-browser set viewport 1080 1350
+  agent-browser open "file://$PWD/content/ads/estaticos/cria-b-notebook-lento.html"
+  agent-browser screenshot content/ads/estaticos/cria-b-notebook-lento.png
+  agent-browser close
+  ```
+- **Identidade visual:** skill de projeto `.commandcode/skills/wtec-visual/SKILL.md` (paleta dark/light, componentes, armadilhas). Carrega automaticamente em sessoes abertas neste repo — use-a em QUALQUER conteudo visual novo.
+- **Stack de reels (testada e aprovada):** VHS + Manim + Matplotlib + Lucide/Simple Icons + Kenney/OpenGameArt (audio) + FFmpeg. Metodo e receitas em [WORKFLOW.md](./WORKFLOW.md).
+- **Pendencias:** criar os ads manualmente no Gerenciador (cria A; depois B/C); avaliar skill `instagram-carousel-ops` se carrossel virar rotina semanal.
+
+## Como este repo funciona
 
 > Repositorio: https://github.com/Wennington123/insta-feature2
 > Continuando em outro notebook? Siga o [CONTINUAR.md](./CONTINUAR.md).
@@ -176,6 +192,7 @@ skills/instagram-agent/  skill do agente
 | Erro | Causa | Solucao |
 |---|---|---|
 | `A Meta nao conseguiu baixar a midia` | repo privado, 404 ou pagina HTML | repo publico ou `IG_MEDIA_BASE_URL` |
+| `Midia indisponivel para a Meta` logo apos o push | jsDelivr ainda propagando o commit novo (~1-2 min) | confirme `HTTP 200` em `curl -I` na URL do `media[]` e rode o workflow de novo |
 | `Content-Type image/png` | formato invalido | `ig render` ou converter para JPEG |
 | `Token invalido (code 190)` | token expirado | `ig auth refresh --write` |
 | `Cota esgotada` | 50 posts/24h | `ig limit`, reagende |

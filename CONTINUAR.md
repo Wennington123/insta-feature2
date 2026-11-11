@@ -147,6 +147,7 @@ Rode o agendador em **um** notebook por vez. `--sync` faz `git pull` antes e com
 | Erro | Causa | Acao |
 |---|---|---|
 | `A Meta nao conseguiu baixar a midia` | repo privado, 404 ou HTML | repo publico ou `IG_MEDIA_BASE_URL` |
+| `Midia indisponivel para a Meta` logo apos o push | jsDelivr propagando o commit novo (~1-2 min) | espere `curl -I` na URL do `media[]` retornar `HTTP 200` e publique de novo |
 | `Content-Type image/png` | formato invalido | `render` ou converter para JPEG |
 | `Token invalido (code 190)` | expirou | gerar novo token no painel |
 | `Cota esgotada` | 50 posts/24h | `limit`, reagendar |
