@@ -24,7 +24,7 @@ TAIL = 0.5  # silêncio ao fim de cada bloco (cena continua em hold)
 
 STYLE = ("force_style='FontName=DejaVu Sans,FontSize=9,Bold=1,"
          "PrimaryColour=&H00FFFFFF,OutlineColour=&H64000000,BorderStyle=1,"
-         "Outline=1.2,Shadow=0,MarginV=55,Alignment=2'")
+         "Outline=1.2,Shadow=0,MarginV=30,Alignment=2'")
 
 
 def run(cmd, **kw):
@@ -134,11 +134,63 @@ def main():
     run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0",
          "-i", "concat.txt", "-c:a", "pcm_s16le", "narration.wav"])
 
-    # ---- 7. final: legendas queimadas + mux ----
-    run(["ffmpeg", "-y", "-loglevel", "error", "-i", "_video.mp4",
-         "-i", "narration.wav", "-filter_complex",
-         f"[0:v]subtitles=captions.srt:{STYLE}[v]",
-         "-map", "[v]", "-map", "1:a",
+    # ---- 7. final: legendas queimadas + narração + SFX ----
+    KENNEY = os.path.join(
+        ROOT, "content", "assets", "audio", "kenney-interface-sounds",
+        "addons", "kenney_interface_sounds")
+    # (fração da cena, som Kenney, volume) — frações espelham pendrive.py
+    SCENE_SFX = {
+        "HOOK":     [(0.12, "glass_001", 0.40), (0.40, "select_001", 0.40),
+                     (0.58, "pluck_001", 0.35)],
+        "PARTES":   [(0.14, "glass_002", 0.40), (0.40, "glass_003", 0.40),
+                     (0.66, "glass_004", 0.40)],
+        "FLASH":    [(0.14, "back_001", 0.35), (0.28, "pluck_001", 0.40),
+                     (0.36, "select_001", 0.45), (0.47, "click_001", 0.40),
+                     (0.62, "pluck_002", 0.40), (0.76, "confirmation_002", 0.45)],
+        "DESGASTE": [(0.15, "glass_005", 0.40), (0.32, "back_002", 0.35),
+                     (0.44, "pluck_001", 0.40), (0.53, "pluck_002", 0.40),
+                     (0.62, "pluck_001", 0.40), (0.82, "confirmation_002", 0.45)],
+        "CTA":      [(0.08, "bong_001", 0.40), (0.30, "select_001", 0.40),
+                     (0.64, "click_002", 0.50), (0.72, "confirmation_003", 0.50)],
+    }
+    starts, t0 = {}, 0.0
+    for sl in slides:
+        starts[sl["scene"]] = t0
+        t0 += durs[sl["scene"]]
+    total = t0
+
+    inputs = ["-i", "_video.mp4", "-i", "narration.wav"]
+    filters = [
+        f"[0:v]subtitles=captions.srt:{STYLE}[v]",
+        "[1:a]aresample=44100,aformat=channel_layouts=stereo[nar]",
+    ]
+    mix = ["[nar]"]
+    n = 2
+    first = slides[0]["scene"]
+    for sl in slides:
+        sc, st = sl["scene"], starts[sl["scene"]]
+        if sc != first:  # whoosh nas transições
+            filters.append(
+                "anoisesrc=colour=pink:duration=0.35:amplitude=0.5,"
+                "lowpass=f=1000,highpass=f=250,"
+                "afade=t=in:d=0.06,afade=t=out:st=0.18:d=0.17,"
+                "volume=0.30,aresample=44100,aformat=channel_layouts=stereo,"
+                f"adelay={int(st * 1000)}:all=1[w{sc}]")
+            mix.append(f"[w{sc}]")
+        for frac, name, vol in SCENE_SFX.get(sc, []):
+            inputs += ["-i", os.path.join(KENNEY, f"{name}.wav")]
+            ts = int((st + frac * durs[sc]) * 1000)
+            filters.append(
+                f"[{n}:a]volume={vol},aresample=44100,"
+                f"aformat=channel_layouts=stereo,adelay={ts}:all=1[s{n}]")
+            mix.append(f"[s{n}]")
+            n += 1
+    filters.append("".join(mix) +
+                   f"amix=inputs={len(mix)}:normalize=0,"
+                   f"atrim=0:{total:.2f}[a]")
+    run(["ffmpeg", "-y", "-loglevel", "error"] + inputs +
+        ["-filter_complex", ";".join(filters),
+         "-map", "[v]", "-map", "[a]",
          "-c:v", "libx264", "-preset", "slow", "-crf", "19",
          "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
          "-ar", "44100", "-ac", "2", "-shortest", "-movflags", "+faststart",

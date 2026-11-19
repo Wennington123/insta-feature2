@@ -3,7 +3,7 @@
   "type": "reel",
   "status": "draft",
   "duration_seconds": 60,
-  "caption": "Você usa todo dia, mas sabe o que tem dentro de um pendrive? 💾\n\nDentro dele existem só 3 coisas:\n🔹 CONECTOR — leva energia e dados\n🧠 CONTROLADOR — o cérebro que comanda tudo\n💾 MEMÓRIA FLASH — onde seus arquivos moram\n\nA flash guarda dados trancando elétrons em células microscópicas. Elétron preso = 1, sem elétron = 0. Desligou? Os elétrons continuam trancados — por isso seus arquivos não somem.\n\nE o detalhe que quase ninguém sabe: cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas pra nenhuma morrer antes das outras. 🧠\n\nNo próximo reel: por que o pendrive diz que está cheio sem estar 👀\n\nSalva aí pra consultar depois e me segue pra mais tecnologia do jeito simples.\n\n#wtec #tecnologia #pendrive #hardware #informatica #dicasdeti #tecnologiadescomplicada",
+  "caption": "Você usa todo dia, mas sabe o que tem dentro de um pendrive? 💾\n\nDentro dele existem só 3 coisas:\n🔹 CONECTOR — leva energia e dados\n🧠 CONTROLADOR — o cérebro que comanda tudo\n💾 MEMÓRIA FLASH — onde seus arquivos moram\n\nA flash guarda dados trancando elétrons em células microscópicas. Elétron preso = 1, sem elétron = 0. Desligou? Os elétrons continuam trancados — por isso seus arquivos não somem.\n\nE o detalhe que quase ninguém sabe: cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas pra nenhuma morrer antes das outras. 🧠\n\nNo próximo reel: por que o pendrive diz que está cheio sem estar 👀\n\n📚 Fontes: artigo original da porta flutuante — Kahng & Sze, \"A floating gate and its application to memory devices\", Bell System Technical Journal (1967) — e guias de memória da IBM e Kingston. Foto do pendrive aberto: Solomon203/Wikimedia Commons (CC BY-SA 4.0).\n\nSalva aí pra consultar depois e me segue pra mais tecnologia do jeito simples.\n\n#wtec #tecnologia #pendrive #hardware #informatica #dicasdeti #tecnologiadescomplicada",
   "alt_text": "Reel didático animado explicando como um pendrive funciona: conector, controlador, memória flash, células e desgaste por escrita.",
   "is_ai_generated": true,
   "slides": [
@@ -54,7 +54,9 @@
     }
   ],
   "sources": [
+    "Kahng, D.; Sze, S. M. (1967). \"A floating gate and its application to memory devices\". Bell System Technical Journal, 46(6), 1283–1288 — artigo original da porta flutuante, base da memória flash",
     "Kingston – Flash Memory Guide: https://www.kingston.com/br/blog/pc-performance/difference-between-slc-mlc-tlc-3d-nand",
-    "IBM – Flash vs. SSD Storage: https://www.ibm.com/think/topics/flash-vs-ssd-storage"
+    "IBM – Flash vs. SSD Storage: https://www.ibm.com/think/topics/flash-vs-ssd-storage",
+    "Foto do pendrive aberto: Solomon203 / Wikimedia Commons, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:2014_ADATA_AS107-8G-RBL_internals.jpg"
   ]
 }

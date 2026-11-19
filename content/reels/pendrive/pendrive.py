@@ -103,15 +103,23 @@ class PARTES(SyncScene):
         eb = eyebrow(self, "por dentro")
         self.P(FadeIn(eb), rt=0.4)
 
+        photo = ImageMobject("pendrive-photo.jpg")
+        photo.scale_to_fit_width(2.6)
+        photo.move_to([0, 2.1, 0])
+        frame = SurroundingRectangle(photo, color=MUTED, stroke_width=2,
+                                     buff=0.06)
+        self.W(0.06)
+        self.P(FadeIn(photo), Create(frame), rt=0.8)
+
         self._boxes = []
-        y = 1.9
+        y = 0.3
         for svg, label, desc, color, frac in self.ROWS:
-            box = RoundedRectangle(corner_radius=0.18, width=3.6, height=1.35,
+            box = RoundedRectangle(corner_radius=0.18, width=3.6, height=1.05,
                                    stroke_color=color, stroke_width=3.5)
-            icon = SVGMobject(svg).scale_to_fit_height(0.55).set_color(color)
-            lab = txt(label, 26, color=WHITE, weight=BOLD)
-            d = txt(desc, 18, color=MUTED)
-            content = VGroup(icon, VGroup(lab, d).arrange(DOWN, buff=0.12))
+            icon = SVGMobject(svg).scale_to_fit_height(0.45).set_color(color)
+            lab = txt(label, 24, color=WHITE, weight=BOLD)
+            d = txt(desc, 17, color=MUTED)
+            content = VGroup(icon, VGroup(lab, d).arrange(DOWN, buff=0.1))
             content.arrange(RIGHT, buff=0.35)
             if content.width > box.width - 0.35:
                 content.scale_to_fit_width(box.width - 0.35)
@@ -121,7 +129,7 @@ class PARTES(SyncScene):
             self.W(frac - 0.04)
             self.P(FadeIn(grp, shift=RIGHT * 0.6), rt=0.55)
             self._boxes.append(grp)
-            y -= 1.75
+            y -= 1.35
         self.hold_tail()
 
 
@@ -267,9 +275,11 @@ class CTA(SyncScene):
                                fill_color=ACCENT, fill_opacity=1.0,
                                stroke_width=0)
         blab = txt("SEGUIR @W.TEC_DIGITAL", 22, color=WHITE, weight=BOLD)
+        if blab.width > btn.width - 0.5:
+            blab.scale_to_fit_width(btn.width - 0.5)
         blab.move_to(btn.get_center())
         btngrp = VGroup(btn, blab)
-        btngrp.next_to(head, DOWN, buff=1.0)
+        btngrp.next_to(head, DOWN, buff=0.55)
         self.W(0.62)
         self.P(FadeIn(btngrp, shift=UP * 0.4), rt=0.5)
 
@@ -278,4 +288,10 @@ class CTA(SyncScene):
             self.P(btngrp.animate.scale(1.06), rt=0.35,
                    rate_func=there_and_back)
             n += 1
+
+        foot = fit(txt("fontes: ibm.com · kingston.com · kahng & sze (1967)\n"
+                       "foto: solomon203 / wikimedia (CC BY-SA 4.0)", 14,
+                       color=MUTED, line_spacing=0.8), w=4.0)
+        foot.to_edge(DOWN, buff=0.3)
+        self.P(FadeIn(foot), rt=0.4)
         self.hold_tail()
