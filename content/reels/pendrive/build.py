@@ -16,15 +16,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 MANIM = os.path.join(ROOT, ".venv-manim", "bin", "manim")
 PIPER = "/tmp/piper/piper/piper"
-VOICE_M = "/tmp/piper/faber.onnx"
-VOICE_C = "/tmp/piper/faber.onnx.json"
+VOICE_M = "/tmp/piper/pt_BR-jeff-medium.onnx"
+VOICE_C = "/tmp/piper/pt_BR-jeff-medium.onnx.json"
 ROTEIRO = os.path.join(ROOT, "content", "posts", "como-funciona-um-pendrive.json")
 OUT = os.path.join(ROOT, "content", "reels", "como-funciona-um-pendrive.mp4")
 TAIL = 0.5  # silêncio ao fim de cada bloco (cena continua em hold)
 
-STYLE = ("force_style='FontName=DejaVu Sans,FontSize=9,Bold=1,"
+STYLE = ("force_style='FontName=DejaVu Sans,FontSize=8,Bold=1,"
          "PrimaryColour=&H00FFFFFF,OutlineColour=&H64000000,BorderStyle=1,"
-         "Outline=1.2,Shadow=0,MarginV=30,Alignment=2'")
+         "Outline=1.2,Shadow=0,MarginV=63,Alignment=2'")
 
 
 def run(cmd, **kw):

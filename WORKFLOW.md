@@ -74,9 +74,12 @@ Instalar o Piper (uma vez, fora do repo):
 ```bash
 mkdir -p /tmp/piper && cd /tmp/piper
 curl -sL -O https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz && tar xzf piper.tar.gz
-curl -sL -o faber.onnx https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx
-curl -sL -o faber.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json
+curl -sL -o pt_BR-jeff-medium.onnx https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/jeff/medium/pt_BR-jeff-medium.onnx
+curl -sL -o pt_BR-jeff-medium.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/jeff/medium/pt_BR-jeff-medium.onnx.json
 ```
+
+Outras vozes masculinas nativas pt-BR testáveis: `cadu/medium`,
+`faber/medium`, `edresson/low` (mesma URL, trocando o caminho da voz).
 
 Para usar a voz gravada: gravar os blocos do `voiceover` (um arquivo por slide
 em `content/reels/<slug>/audio/segN.wav`) e pular a etapa Piper no `build.py`.
@@ -179,6 +182,6 @@ node dist/cli.js publish <slug>
 
 - [ ] Generalizar `compose_final.py` para ler roteiro JSON (tempo: quando haver 3+ reels)
 - [ ] Biblioteca própria de trilhas/SFX em `content/assets/audio/`
-- [x] Narração com Piper TTS PT-BR — feita no reel "como funciona um pendrive" (`content/reels/pendrive/build.py`, voz `faber`); trocar por voz gravada no próximo
+- [x] Narração com Piper TTS PT-BR — feita no reel "como funciona um pendrive" (`content/reels/pendrive/build.py`, voz `jeff`); trocar por voz gravada no próximo
 - [ ] Versão 4:5 (1080x1350) pra feed ads
 - [ ] Documentar brand guidelines
