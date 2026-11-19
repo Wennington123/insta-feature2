@@ -1,66 +1,44 @@
 {
   "slug": "como-funciona-um-pendrive",
   "type": "reels",
-  "status": "scheduled",
-  "scheduled_for": "2026-11-19T19:00:00-03:00",
-  "duration_seconds": 54,
-  "media": [
-    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/como-funciona-um-pendrive.mp4"
-  ],
+  "status": "published",
   "caption": "Você usa todo dia, mas sabe o que tem dentro de um pendrive? 💾\n\nDentro dele existem só 3 coisas:\n🔹 CONECTOR — leva energia e dados\n🧠 CONTROLADOR — o cérebro que comanda tudo\n💾 MEMÓRIA FLASH — onde seus arquivos moram\n\nA flash guarda dados trancando elétrons em células microscópicas. Elétron preso = 1, sem elétron = 0. Desligou? Os elétrons continuam trancados — por isso seus arquivos não somem.\n\nE o detalhe que quase ninguém sabe: cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas pra nenhuma morrer antes das outras. 🧠\n\nNo próximo reel: por que o pendrive diz que está cheio sem estar 👀\n\n📚 Fontes: artigo original da porta flutuante — Kahng & Sze, \"A floating gate and its application to memory devices\", Bell System Technical Journal (1967) — e guias de memória da IBM e Kingston. Foto do pendrive aberto: Solomon203/Wikimedia Commons (CC BY-SA 4.0).\n\nSalva aí pra consultar depois e me segue pra mais tecnologia do jeito simples.\n\n#wtec #tecnologia #pendrive #hardware #informatica #dicasdeti #tecnologiadescomplicada",
   "alt_text": "Reel didático animado explicando como um pendrive funciona: conector, controlador, memória flash, células e desgaste por escrita.",
+  "scheduled_for": "2026-11-19T19:00:00-03:00",
   "is_ai_generated": true,
   "slides": [
     {
-      "index": 1,
       "kind": "cover",
-      "scene": "HOOK",
       "eyebrow": "w.tec_digital",
       "heading": "Como funciona um pendrive?",
-      "body": "3 chips. Zero mágica.",
-      "voiceover": "Você usa um pendrive quase todo dia. Mas sabe o que tem dentro dele?"
+      "body": "3 chips. Zero mágica."
     },
     {
-      "index": 2,
       "kind": "content",
-      "scene": "PARTES",
       "eyebrow": "por dentro",
       "heading": "3 peças só",
-      "body": "Conector, controlador e memória flash",
-      "voiceover": "Dentro dele, só três coisas: o conector, que leva energia e dados; o controlador, que é o cérebro; e a memória flash, onde os arquivos moram."
+      "body": "Conector, controlador e memória flash"
     },
     {
-      "index": 3,
       "kind": "content",
-      "scene": "FLASH",
       "eyebrow": "a mágica",
       "heading": "Elétrons trancados",
-      "body": "Preso = 1. Solto = 0. Sem energia, continua trancado.",
-      "voiceover": "A flash guarda dados trancando elétrons em células microscópicas. Elétron preso, a célula vale um. Sem elétron, vale zero. Desligou? Os elétrons continuam trancados. Por isso seus arquivos não somem."
+      "body": "Preso = 1. Solto = 0. Sem energia, continua trancado."
     },
     {
-      "index": 4,
       "kind": "content",
-      "scene": "DESGASTE",
       "eyebrow": "o detalhe",
       "heading": "Cada escrita desgasta",
-      "body": "O controlador espalha as escritas pra durar mais",
-      "voiceover": "Mas cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas, pra nenhuma célula morrer antes das outras."
+      "body": "O controlador espalha as escritas pra durar mais"
     },
     {
-      "index": 5,
       "kind": "cta",
-      "scene": "CTA",
       "eyebrow": "próximo reel",
       "heading": "Por que o pendrive mente sobre o espaço?",
-      "body": "Segue pra não perder",
-      "voiceover": "No próximo, você vai entender por que o pendrive diz que está cheio sem estar. Segue pra não perder."
+      "body": "Segue pra não perder"
     }
   ],
-  "sources": [
-    "Kahng, D.; Sze, S. M. (1967). \"A floating gate and its application to memory devices\". Bell System Technical Journal, 46(6), 1283–1288 — artigo original da porta flutuante, base da memória flash",
-    "Kingston – Flash Memory Guide: https://www.kingston.com/br/blog/pc-performance/difference-between-slc-mlc-tlc-3d-nand",
-    "IBM – Flash vs. SSD Storage: https://www.ibm.com/think/topics/flash-vs-ssd-storage",
-    "Foto do pendrive aberto: Solomon203 / Wikimedia Commons, CC BY-SA 4.0 — https://commons.wikimedia.org/wiki/File:2014_ADATA_AS107-8G-RBL_internals.jpg"
+  "media": [
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/como-funciona-um-pendrive.mp4"
   ]
 }
