@@ -2,8 +2,9 @@
 
 Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre-visualiza e publica** via API oficial da Meta. Funciona igual em Windows e Linux; conteudo e historico sincronizam pelo GitHub, segredos ficam so na maquina.
 
-## Estado atual (atualizado em 2026-11-11)
+## Estado atual (atualizado em 2026-11-19)
 
+- **Pipeline de reels narrado validado e aprovado:** piloto `como-funciona-um-pendrive` (54s, 1080x1920) — roteiro JSON → narração **Piper TTS** (voz `jeff`, pt-BR nativo) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, biblioteca em `content/assets/audio/`) + whoosh nas transições → legendas queimadas acima da zona de UI do Reels → foto real (Wikimedia Commons, CC BY-SA) e referências (Kahng & Sze 1967; IBM; Kingston) no vídeo e na legenda. Um comando: `python3 content/reels/pendrive/build.py`. Série didática "como funciona X" pronta pra escalar (próximos: por que o pendrive mente sobre espaço, SSD, RAM).
 - **Ultima publicacao:** `superaquecimento-notebook` (post de imagem unica, cria A) — `media_id=18100550657407752`. O plano: rodar **ads manualmente** no Gerenciador promovendo/criando anuncio com essa imagem.
 - **Crias B e C guardadas** em `content/ads/estaticos/` (`cria-b-notebook-lento`, `cria-c-celular`) para teste A/B/C de mensagem em ads depois. Layout identico, muda a dor. Para re-renderizar:
   ```bash
@@ -13,7 +14,7 @@ Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre
   agent-browser close
   ```
 - **Identidade visual:** skill de projeto `.commandcode/skills/wtec-visual/SKILL.md` (paleta dark/light, componentes, armadilhas). Carrega automaticamente em sessoes abertas neste repo — use-a em QUALQUER conteudo visual novo.
-- **Stack de reels (testada e aprovada):** VHS + Manim + Matplotlib + Lucide/Simple Icons + Kenney/OpenGameArt (audio) + FFmpeg. Metodo e receitas em [WORKFLOW.md](./WORKFLOW.md).
+- **Stack de reels (testada e aprovada):** VHS + Manim + Matplotlib + Lucide/Simple Icons + Piper TTS (narração pt-BR) + Kenney/OpenGameArt (audio) + FFmpeg. Metodo e receitas em [WORKFLOW.md](./WORKFLOW.md).
 - **Pendencias:** criar os ads manualmente no Gerenciador (cria A; depois B/C); avaliar skill `instagram-carousel-ops` se carrossel virar rotina semanal.
 
 ## Como este repo funciona
