@@ -25,3 +25,11 @@ content/reels/ads/teste-pipeline/_video.mp4
 content/reels/ads/teste-pipeline/_audio.m4a
 content/reels/ads/teste-pipeline/hook-fast.mp4
 content/reels/ads/teste-pipeline/boot.mp4
+content/reels/pendrive/media/
+content/reels/pendrive/audio/
+content/reels/pendrive/seg*.mp4
+content/reels/pendrive/_video.mp4
+content/reels/pendrive/narration.wav
+content/reels/pendrive/sil.wav
+content/reels/pendrive/concat.txt
+content/reels/pendrive/__pycache__/

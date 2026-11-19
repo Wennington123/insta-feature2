@@ -1,0 +1,83 @@
+1
+00:00:00,150 --> 00:00:01,898
+Você usa um pendrive quase todo
+
+2
+00:00:01,898 --> 00:00:03,590
+dia. Mas sabe o que tem dentro
+
+3
+00:00:03,590 --> 00:00:03,872
+dele?
+
+4
+00:00:04,672 --> 00:00:06,478
+Dentro dele, só três coisas: o
+
+5
+00:00:06,478 --> 00:00:08,163
+conector, que leva energia e
+
+6
+00:00:08,163 --> 00:00:09,909
+dados; o controlador, que é o
+
+7
+00:00:09,909 --> 00:00:11,836
+cérebro; e a memória flash, onde
+
+8
+00:00:11,836 --> 00:00:12,919
+os arquivos moram.
+
+9
+00:00:13,719 --> 00:00:15,692
+A flash guarda dados trancando
+
+10
+00:00:15,692 --> 00:00:17,927
+elétrons em células microscópicas.
+
+11
+00:00:17,927 --> 00:00:20,031
+Elétron preso, a célula vale um.
+
+12
+00:00:20,031 --> 00:00:22,200
+Sem elétron, vale zero. Desligou?
+
+13
+00:00:22,200 --> 00:00:24,304
+Os elétrons continuam trancados.
+
+14
+00:00:24,304 --> 00:00:26,473
+Por isso seus arquivos não somem.
+
+15
+00:00:27,273 --> 00:00:29,117
+Mas cada escrita desgasta um pouco
+
+16
+00:00:29,117 --> 00:00:30,853
+a célula. Por isso o controlador
+
+17
+00:00:30,853 --> 00:00:32,588
+espalha as escritas, pra nenhuma
+
+18
+00:00:32,588 --> 00:00:34,270
+célula morrer antes das outras.
+
+19
+00:00:35,070 --> 00:00:36,827
+No próximo, você vai entender por
+
+20
+00:00:36,827 --> 00:00:38,585
+que o pendrive diz que está cheio
+
+21
+00:00:38,585 --> 00:00:40,290
+sem estar. Segue pra não perder.

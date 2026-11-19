@@ -1,0 +1,60 @@
+{
+  "slug": "como-funciona-um-pendrive",
+  "type": "reel",
+  "status": "draft",
+  "duration_seconds": 60,
+  "caption": "Você usa todo dia, mas sabe o que tem dentro de um pendrive? 💾\n\nDentro dele existem só 3 coisas:\n🔹 CONECTOR — leva energia e dados\n🧠 CONTROLADOR — o cérebro que comanda tudo\n💾 MEMÓRIA FLASH — onde seus arquivos moram\n\nA flash guarda dados trancando elétrons em células microscópicas. Elétron preso = 1, sem elétron = 0. Desligou? Os elétrons continuam trancados — por isso seus arquivos não somem.\n\nE o detalhe que quase ninguém sabe: cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas pra nenhuma morrer antes das outras. 🧠\n\nNo próximo reel: por que o pendrive diz que está cheio sem estar 👀\n\nSalva aí pra consultar depois e me segue pra mais tecnologia do jeito simples.\n\n#wtec #tecnologia #pendrive #hardware #informatica #dicasdeti #tecnologiadescomplicada",
+  "alt_text": "Reel didático animado explicando como um pendrive funciona: conector, controlador, memória flash, células e desgaste por escrita.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "scene": "HOOK",
+      "eyebrow": "w.tec_digital",
+      "heading": "Como funciona um pendrive?",
+      "body": "3 chips. Zero mágica.",
+      "voiceover": "Você usa um pendrive quase todo dia. Mas sabe o que tem dentro dele?"
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "scene": "PARTES",
+      "eyebrow": "por dentro",
+      "heading": "3 peças só",
+      "body": "Conector, controlador e memória flash",
+      "voiceover": "Dentro dele, só três coisas: o conector, que leva energia e dados; o controlador, que é o cérebro; e a memória flash, onde os arquivos moram."
+    },
+    {
+      "index": 3,
+      "kind": "content",
+      "scene": "FLASH",
+      "eyebrow": "a mágica",
+      "heading": "Elétrons trancados",
+      "body": "Preso = 1. Solto = 0. Sem energia, continua trancado.",
+      "voiceover": "A flash guarda dados trancando elétrons em células microscópicas. Elétron preso, a célula vale um. Sem elétron, vale zero. Desligou? Os elétrons continuam trancados. Por isso seus arquivos não somem."
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "scene": "DESGASTE",
+      "eyebrow": "o detalhe",
+      "heading": "Cada escrita desgasta",
+      "body": "O controlador espalha as escritas pra durar mais",
+      "voiceover": "Mas cada escrita desgasta um pouco a célula. Por isso o controlador espalha as escritas, pra nenhuma célula morrer antes das outras."
+    },
+    {
+      "index": 5,
+      "kind": "cta",
+      "scene": "CTA",
+      "eyebrow": "próximo reel",
+      "heading": "Por que o pendrive mente sobre o espaço?",
+      "body": "Segue pra não perder",
+      "voiceover": "No próximo, você vai entender por que o pendrive diz que está cheio sem estar. Segue pra não perder."
+    }
+  ],
+  "sources": [
+    "Kingston – Flash Memory Guide: https://www.kingston.com/br/blog/pc-performance/difference-between-slc-mlc-tlc-3d-nand",
+    "IBM – Flash vs. SSD Storage: https://www.ibm.com/think/topics/flash-vs-ssd-storage"
+  ]
+}

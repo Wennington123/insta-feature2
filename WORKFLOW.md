@@ -18,6 +18,7 @@ Validada no teste `content/reels/ads/teste-pipeline/` (14s, 1080x1920, com músi
 | Explicação | **Manim Community** | Cenas animadas: caixas, ícones (SVG Lucide), t2c (cor por palavra) | `.venv-manim/bin/manim` (pip) |
 | Dados | **Matplotlib** `FuncAnimation` | Gráficos/barras animadas com contador | no mesmo venv |
 | CTA | **Manim** | Logo + botão WhatsApp pulsando | idem |
+| Narração | **Piper** (rhasspy) | TTS PT-BR local, um wav por bloco do roteiro | binário + voz `pt_BR-faber-medium` (~78MB em /tmp) |
 | Ícones | **Lucide** (ISC) + **Simple Icons** (CC0, WhatsApp etc.) | SVGs baixados do GitHub raw | `curl` direto |
 | SFX | **Kenney Interface Sounds** (CC0, 100 sons WAV) | teclas, pops, alerts, dings | repo `Calinou/kenney-interface-sounds` |
 | Música | **OpenGameArt CC0** | trilha (ex: "acid-detective", 320kbps) | `curl` direto |
@@ -56,6 +57,29 @@ disable_caching = True
 - Vídeo: `xfade=fade` entre os 4 segmentos, offsets calculados pelas durações reais
 - Áudio: trilha CC0 a `volume=0.13` + SFX Kenney com `adelay` por timestamp + whoosh sintético (`anoisesrc` pink + bandpass) nas transições
 - `amix normalize=0` → AAC 160k → mux com `-c:v copy`
+
+### Pipeline narrado (didático) — `content/reels/pendrive/`
+
+Reel 100% narrado: cada slide do roteiro vira um bloco de áudio (Piper), a cena
+Manim correspondente lê a duração em `durs.json` e se sincroniza por frações,
+legendas SRT proporcionais queimadas no final. Um comando só:
+
+```bash
+python3 content/reels/pendrive/build.py   # roteiro → narração → manim → mp4
+# saída: content/reels/como-funciona-um-pendrive.mp4 (1080x1920, ~41s)
+```
+
+Instalar o Piper (uma vez, fora do repo):
+
+```bash
+mkdir -p /tmp/piper && cd /tmp/piper
+curl -sL -O https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz && tar xzf piper.tar.gz
+curl -sL -o faber.onnx https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx
+curl -sL -o faber.onnx.json https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/pt/pt_BR/faber/medium/pt_BR-faber-medium.onnx.json
+```
+
+Para usar a voz gravada: gravar os blocos do `voiceover` (um arquivo por slide
+em `content/reels/<slug>/audio/segN.wav`) e pular a etapa Piper no `build.py`.
 
 ### Rodar o pipeline
 
@@ -155,6 +179,6 @@ node dist/cli.js publish <slug>
 
 - [ ] Generalizar `compose_final.py` para ler roteiro JSON (tempo: quando haver 3+ reels)
 - [ ] Biblioteca própria de trilhas/SFX em `content/assets/audio/`
-- [ ] Narração opcional com Piper TTS PT-BR (voz Dii)
+- [x] Narração com Piper TTS PT-BR — feita no reel "como funciona um pendrive" (`content/reels/pendrive/build.py`, voz `faber`); trocar por voz gravada no próximo
 - [ ] Versão 4:5 (1080x1350) pra feed ads
 - [ ] Documentar brand guidelines
