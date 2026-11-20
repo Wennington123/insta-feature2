@@ -4,8 +4,11 @@ Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre
 
 ## Estado atual (atualizado em 2026-11-19)
 
-- **Pipeline de reels narrado validado e aprovado:** piloto `como-funciona-um-pendrive` (54s, 1080x1920) — roteiro JSON → narração **Piper TTS** (voz `jeff`, pt-BR nativo) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, biblioteca em `content/assets/audio/`) + whoosh nas transições → legendas queimadas acima da zona de UI do Reels → foto real (Wikimedia Commons, CC BY-SA) e referências (Kahng & Sze 1967; IBM; Kingston) no vídeo e na legenda. Um comando: `python3 content/reels/pendrive/build.py`. Série didática "como funciona X" pronta pra escalar (próximos: por que o pendrive mente sobre espaço, SSD, RAM).
-- **Ultima publicacao:** `superaquecimento-notebook` (post de imagem unica, cria A) — `media_id=18100550657407752`. O plano: rodar **ads manualmente** no Gerenciador promovendo/criando anuncio com essa imagem.
+- **Pipeline de reels narrado validado e em produção** — série didática "como funciona X": roteiro JSON → narração **Piper TTS** (voz `jeff`, pt-BR nativo; narração sempre em português fonético, sem termo estrangeiro que a voz erre) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, em `content/assets/audio/`) → legendas queimadas na zona de segurança do Reels. Um comando por reel: `python3 content/reels/<slug>/build.py`.
+- **Publicado:** `como-funciona-um-pendrive` (54s) — [instagram.com/reel/Df8Rod9CF5J](https://www.instagram.com/reel/Df8Rod9CF5J/) (`media_id=17925064590446104`). Com foto real (Wikimedia Commons, CC BY-SA) e referências no vídeo/descrição (Kahng & Sze 1967; IBM; Kingston).
+- **Agendado:** `por-que-fechar-apps-nao-acelera` (Android, 66s) — sábado 21/11 às 15:00 (UTC-3). O `publish-due.yml` ganhou cron de sábado 18:00 UTC pra publicar sozinho. Visuais novos (mockup de celular, apps congelando) com ícones **Bootstrap Icons** (MIT — SVG Repo bloqueia bots; puxar das coleções originais).
+- **Fila da série:** o que é o cache (e por que limpar toda hora atrapalha) → por que 8GB "somem" → SSD.
+- **Ultima publicacao (feed):** `superaquecimento-notebook` (post de imagem unica, cria A) — `media_id=18100550657407752`. Ads manuais no Gerenciador pendentes.
 - **Crias B e C guardadas** em `content/ads/estaticos/` (`cria-b-notebook-lento`, `cria-c-celular`) para teste A/B/C de mensagem em ads depois. Layout identico, muda a dor. Para re-renderizar:
   ```bash
   agent-browser set viewport 1080 1350
@@ -197,6 +200,7 @@ skills/instagram-agent/  skill do agente
 | `Content-Type image/png` | formato invalido | `ig render` ou converter para JPEG |
 | `Token invalido (code 190)` | token expirado | `ig auth refresh --write` |
 | `Cota esgotada` | 50 posts/24h | `ig limit`, reagende |
+| `Midia indisponivel` com video mp4 | `raw.githubusercontent` serve `application/octet-stream` | usar URL jsDelivr: `cdn.jsdelivr.net/gh/<owner>/<repo>@main/<caminho>.mp4` (serve `video/mp4`) |
 | `slug ja foi publicado` | idempotencia | outro slug ou `--force` |
 | Render com fonte estranha no Linux | `Arial` ausente | troque `font` em `brand.md` |
 
