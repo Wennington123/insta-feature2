@@ -1,0 +1,115 @@
+1
+00:00:00,150 --> 00:00:02,331
+Você fecha os aplicativos do
+
+2
+00:00:02,331 --> 00:00:04,823
+celular pra ele ficar rápido? No
+
+3
+00:00:04,823 --> 00:00:07,472
+Android, isso pode deixar ele mais
+
+4
+00:00:07,472 --> 00:00:09,809
+lento. Deixa eu te mostrar por
+
+5
+00:00:09,809 --> 00:00:10,121
+quê.
+
+6
+00:00:10,921 --> 00:00:13,189
+Quando você sai de um aplicativo,
+
+7
+00:00:13,189 --> 00:00:15,389
+o Android não joga ele fora. Ele
+
+8
+00:00:15,389 --> 00:00:17,588
+congela o aplicativo na memória:
+
+9
+00:00:17,588 --> 00:00:19,856
+ele não gasta processamento, fica
+
+10
+00:00:19,856 --> 00:00:21,919
+dormindo, pronto pra voltar na
+
+11
+00:00:21,919 --> 00:00:23,362
+hora que você chamar.
+
+12
+00:00:24,162 --> 00:00:26,164
+Se você fecha de verdade, o
+
+13
+00:00:26,164 --> 00:00:28,685
+Android joga tudo fora. Na próxima
+
+14
+00:00:28,685 --> 00:00:31,131
+vez, ele precisa carregar tudo do
+
+15
+00:00:31,131 --> 00:00:33,504
+zero: gasta processamento, gasta
+
+16
+00:00:33,504 --> 00:00:36,025
+bateria e demora mais. Você trocou
+
+17
+00:00:36,025 --> 00:00:38,175
+um aplicativo dormindo por um
+
+18
+00:00:38,175 --> 00:00:39,880
+trabalho desnecessário.
+
+19
+00:00:40,680 --> 00:00:42,821
+Mas tem hora que fechar faz
+
+20
+00:00:42,821 --> 00:00:44,961
+sentido. Aplicativo tocando
+
+21
+00:00:44,961 --> 00:00:47,181
+música, GPS ligado, baixando
+
+22
+00:00:47,181 --> 00:00:49,797
+arquivo: se você não está usando,
+
+23
+00:00:49,797 --> 00:00:52,493
+pode fechar. E se o celular travar
+
+24
+00:00:52,493 --> 00:00:55,189
+de verdade? Reiniciar resolve mais
+
+25
+00:00:55,189 --> 00:00:56,854
+que fechar um por um.
+
+26
+00:00:57,654 --> 00:00:59,786
+No próximo, te explico o que é o
+
+27
+00:00:59,786 --> 00:01:02,052
+cachê do celular, e por que limpar
+
+28
+00:01:02,052 --> 00:01:04,051
+ele toda hora pode atrapalhar.
+
+29
+00:01:04,051 --> 00:01:05,451
+Segue pra não perder.

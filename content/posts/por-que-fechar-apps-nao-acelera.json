@@ -1,0 +1,63 @@
+{
+  "slug": "por-que-fechar-apps-nao-acelera",
+  "type": "reels",
+  "status": "scheduled",
+  "scheduled_for": "2026-11-21T15:00:00-03:00",
+  "duration_seconds": 66,
+  "media": [
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/por-que-fechar-apps-nao-acelera.mp4"
+  ],
+  "caption": "Fechar os apps pra acelerar o celular? Pois isso pode deixar ele MAIS LENTO. 📱\n\nQuando você sai de um aplicativo no Android, ele não é jogado fora: ele fica CONGELADO na memória — zero processamento, pronto pra voltar na hora que você chama.\n\nSe você fecha de verdade, o Android descarta tudo. Na próxima vez, precisa carregar tudo do zero: mais processamento, mais bateria, mais espera. Você trocou um app dormindo por um trabalho desnecessário. 💸\n\nMas tem hora que fechar faz sentido:\n🎵 app tocando música\n📍 GPS ligado\n⬇️ baixando arquivo\nSe não é o seu caso, deixa dormindo. E se o celular travou de verdade? Reiniciar resolve mais que fechar um por um.\n\nNo próximo reel: o que é o CACHE do celular — e por que limpar toda hora atrapalha 👀\n\nSalva aí e me segue pra mais tecnologia do jeito simples.\n\n📚 Fonte: documentação oficial do Android sobre ciclo de vida de processos e apps em cache — developer.android.com/guide/components/activities/process-lifecycle-and-app-state\n\n#wtec #tecnologia #android #celular #dicasdeti #informatica #tecnologiadescomplicada",
+  "alt_text": "Reel didático animado explicando por que fechar aplicativos não acelera o celular Android: apps congelados na memória e o custo de reabrir do zero.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "scene": "HOOK",
+      "eyebrow": "w.tec_digital",
+      "heading": "Fechar apps acelera o celular?",
+      "body": "spoiler: pode piorar",
+      "voiceover": "Você fecha os aplicativos do celular pra ele ficar rápido? No Android, isso pode deixar ele mais lento. Deixa eu te mostrar por quê."
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "scene": "CONGELA",
+      "eyebrow": "o que acontece",
+      "heading": "O Android congela o app",
+      "body": "zero processamento dormindo",
+      "voiceover": "Quando você sai de um aplicativo, o Android não joga ele fora. Ele congela o aplicativo na memória: ele não gasta processamento, fica dormindo, pronto pra voltar na hora que você chamar."
+    },
+    {
+      "index": 3,
+      "kind": "content",
+      "scene": "CUSTO",
+      "eyebrow": "o custo real",
+      "heading": "Fechar custa caro",
+      "body": "reabrir do zero = mais trabalho",
+      "voiceover": "Se você fecha de verdade, o Android joga tudo fora. Na próxima vez, ele precisa carregar tudo do zero: gasta processamento, gasta bateria e demora mais. Você trocou um aplicativo dormindo por um trabalho desnecessário."
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "scene": "QUANDO",
+      "eyebrow": "as exceções",
+      "heading": "Quando fechar faz sentido",
+      "body": "música, GPS, download — e reiniciar resolve",
+      "voiceover": "Mas tem hora que fechar faz sentido. Aplicativo tocando música, GPS ligado, baixando arquivo: se você não está usando, pode fechar. E se o celular travar de verdade? Reiniciar resolve mais que fechar um por um."
+    },
+    {
+      "index": 5,
+      "kind": "cta",
+      "scene": "CTA",
+      "eyebrow": "próximo reel",
+      "heading": "O que é o cache?",
+      "body": "e por que limpar toda hora atrapalha",
+      "voiceover": "No próximo, te explico o que é o cachê do celular, e por que limpar ele toda hora pode atrapalhar. Segue pra não perder."
+    }
+  ],
+  "sources": [
+    "Documentação oficial do Android – Ciclo de vida de processos e apps em cache: https://developer.android.com/guide/components/activities/process-lifecycle-and-app-state"
+  ]
+}
