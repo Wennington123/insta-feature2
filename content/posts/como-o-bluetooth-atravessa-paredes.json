@@ -1,8 +1,12 @@
 {
   "slug": "como-o-bluetooth-atravessa-paredes",
   "type": "reels",
-  "status": "draft",
-  "duration_seconds": 67,
+  "status": "scheduled",
+  "scheduled_for": "2026-11-23T12:00:00-03:00",
+  "duration_seconds": 70,
+  "media": [
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/como-o-bluetooth-atravessa-paredes.mp4"
+  ],
   "caption": "Seu fone toca música mesmo com uma parede entre ele e o celular. Como? 🎧\n\nO Bluetooth fala por ondas de rádio — luz invisível de baixa energia que atravessa plástico, madeira e tecido.\n\n📡 E TEM MAIS:\n⚡ Primeiro os aparelhos se apresentam e trocam códigos secretos (pareamento)\n🦘 Depois o Bluetooth salta de canal em canal, milhares de vezes por segundo, pra fugir de interferência\n🧱 Os inimigos dele: concreto grosso e metal — ali o sinal enfraquece\n\nNo próximo reel: por que o Wi-Fi cai quando o vizinho liga o micro-ondas 👀\n\nSalva aí e segue pra entender tecnologia do jeito simples.\n\n📚 Fontes: Bluetooth Core Specification v5.4 (Bluetooth SIG — pareamento, segurança e Adaptive Frequency Hopping) e IEEE 802.15.1 (padrão de redes pessoais sem fio).\n\n#wtec #tecnologia #bluetooth #celular #hardware #informatica #dicasdeti #tecnologiadescomplicada",
   "alt_text": "Reel didático animado sobre como o Bluetooth funciona por dentro: ondas de rádio atravessando barreiras, pareamento entre aparelhos e salto de canais contra interferência.",
   "is_ai_generated": true,
