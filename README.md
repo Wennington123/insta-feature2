@@ -2,11 +2,12 @@
 
 Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre-visualiza e publica** via API oficial da Meta. Funciona igual em Windows e Linux; conteudo e historico sincronizam pelo GitHub, segredos ficam so na maquina.
 
-## Estado atual (atualizado em 2026-11-19)
+## Estado atual (atualizado em 2026-11-21)
 
-- **Pipeline de reels narrado validado e em produção** — série didática "como funciona X": roteiro JSON → narração **Piper TTS** (voz `jeff`, pt-BR nativo; narração sempre em português fonético, sem termo estrangeiro que a voz erre) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, em `content/assets/audio/`) → legendas queimadas na zona de segurança do Reels. Um comando por reel: `python3 content/reels/<slug>/build.py`.
-- **Publicado:** `como-funciona-um-pendrive` (54s) — [instagram.com/reel/Df8Rod9CF5J](https://www.instagram.com/reel/Df8Rod9CF5J/) (`media_id=17925064590446104`). Com foto real (Wikimedia Commons, CC BY-SA) e referências no vídeo/descrição (Kahng & Sze 1967; IBM; Kingston).
-- **Agendado:** `por-que-fechar-apps-nao-acelera` (Android, 66s) — sábado 21/11 às 15:00 (UTC-3). O `publish-due.yml` ganhou cron de sábado 18:00 UTC pra publicar sozinho. Visuais novos (mockup de celular, apps congelando) com ícones **Bootstrap Icons** (MIT — SVG Repo bloqueia bots; puxar das coleções originais).
+- **Pipeline de reels narrado validado e em produção** — série didática "como funciona X": roteiro JSON → narração **Kokoro-82M** (Apache 2.0, ONNX local em `.venv-kokoro` + modelo em `~/.local/share/kokoro`, voz `pm_santa`) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, em `content/assets/audio/`) → legendas queimadas na zona de segurança do Reels. Um comando por reel: `python3 content/reels/<slug>/build.py`.
+- **Termos estrangeiros**: dicionário `FONETICO` em `content/reels/tts_kokoro.py` converte pra grafia fonética **só na voz** (Wi-Fi → uaifai, cache → cachê); a legenda mantém o termo original. Piper/voz `jeff` mantido como fallback histórico.
+- **Publicado:** `como-funciona-um-pendrive` (54s) — [instagram.com/reel/Df8Rod9CF5J](https://www.instagram.com/reel/Df8Rod9CF5J/) · `por-que-fechar-apps-nao-acelera` (Android, 66s, saiu sozinho pelo cron de sábado) — `media_id=17994136074081962`.
+- **Agendado:** `como-o-bluetooth-atravessa-paredes` (70s, voz Kokoro) — segunda 23/11 às 12:00 (UTC-3). `publish-due.yml` com crons de quinta, sábado e segunda. Ícones **Bootstrap Icons** (MIT — SVG Repo bloqueia bots; puxar das coleções originais).
 - **Fila da série:** o que é o cache (e por que limpar toda hora atrapalha) → por que 8GB "somem" → SSD.
 - **Ultima publicacao (feed):** `superaquecimento-notebook` (post de imagem unica, cria A) — `media_id=18100550657407752`. Ads manuais no Gerenciador pendentes.
 - **Crias B e C guardadas** em `content/ads/estaticos/` (`cria-b-notebook-lento`, `cria-c-celular`) para teste A/B/C de mensagem em ads depois. Layout identico, muda a dor. Para re-renderizar:
@@ -17,8 +18,8 @@ Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre
   agent-browser close
   ```
 - **Identidade visual:** skill de projeto `.commandcode/skills/wtec-visual/SKILL.md` (paleta dark/light, componentes, armadilhas). Carrega automaticamente em sessoes abertas neste repo — use-a em QUALQUER conteudo visual novo.
-- **Stack de reels (testada e aprovada):** VHS + Manim + Matplotlib + Lucide/Simple Icons + Piper TTS (narração pt-BR) + Kenney/OpenGameArt (audio) + FFmpeg. Metodo e receitas em [WORKFLOW.md](./WORKFLOW.md).
-- **Pendencias:** criar os ads manualmente no Gerenciador (cria A; depois B/C); avaliar skill `instagram-carousel-ops` se carrossel virar rotina semanal.
+- **Stack de reels (testada e aprovada):** Manim + Kokoro TTS (pt-BR) + Lucide/Bootstrap Icons + Kenney (SFX) + FFmpeg. Metodo e receitas em [WORKFLOW.md](./WORKFLOW.md).
+- **Pendencias:** criar os ads manualmente no Gerenciador (cria A; depois B/C); clonagem de voz própria (gravar ~5min de leitura limpa; XTTS/RVC quando chegar a amostra).
 
 ## Como este repo funciona
 
