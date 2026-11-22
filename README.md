@@ -5,7 +5,7 @@ Agente que **cria o conteudo** da conta `@w.tec_digital` e CLI que **valida, pre
 ## Estado atual (atualizado em 2026-11-21)
 
 - **Pipeline de reels narrado validado e em produção** — série didática "como funciona X": roteiro JSON → narração **Kokoro-82M** (Apache 2.0, ONNX local em `.venv-kokoro` + modelo em `~/.local/share/kokoro`, voz `pm_santa`) → cenas **Manim** sincronizadas por fração do áudio → SFX **Kenney** (CC0, em `content/assets/audio/`) → legendas queimadas na zona de segurança do Reels. Um comando por reel: `python3 content/reels/<slug>/build.py`.
-- **Termos estrangeiros**: dicionário `FONETICO` em `content/reels/tts_kokoro.py` converte pra grafia fonética **só na voz** (Wi-Fi → uaifai, cache → cachê); a legenda mantém o termo original. Piper/voz `jeff` mantido como fallback histórico.
+- **Termos estrangeiros**: dicionário `FONETICO` em `content/reels/tts_kokoro.py` converte **todo** estrangeirismo pra grafia fonética **só na voz** (Wi-Fi → uaifai, Bluetooth → blutufi, cache → cachê, e-mail → imeiu, backup → békape, chip → tchip... 23 termos); a legenda mantém o termo original. Piper/voz `jeff` mantido como fallback histórico.
 - **Publicado:** `como-funciona-um-pendrive` (54s) — [instagram.com/reel/Df8Rod9CF5J](https://www.instagram.com/reel/Df8Rod9CF5J/) · `por-que-fechar-apps-nao-acelera` (Android, 66s, saiu sozinho pelo cron de sábado) — `media_id=17994136074081962`.
 - **Agendado:** `como-o-bluetooth-atravessa-paredes` (70s, voz Kokoro) — segunda 23/11 às 12:00 (UTC-3). `publish-due.yml` com crons de quinta, sábado e segunda. Ícones **Bootstrap Icons** (MIT — SVG Repo bloqueia bots; puxar das coleções originais).
 - **Fila da série:** o que é o cache (e por que limpar toda hora atrapalha) → por que 8GB "somem" → SSD.
