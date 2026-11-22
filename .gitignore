@@ -49,3 +49,11 @@ content/reels/fechar-apps/narration.wav
 content/reels/fechar-apps/sil.wav
 content/reels/fechar-apps/concat.txt
 content/reels/fechar-apps/__pycache__/
+content/reels/bluetooth/media/
+content/reels/bluetooth/audio/
+content/reels/bluetooth/seg*.mp4
+content/reels/bluetooth/_video.mp4
+content/reels/bluetooth/narration.wav
+content/reels/bluetooth/sil.wav
+content/reels/bluetooth/concat.txt
+content/reels/bluetooth/__pycache__/
