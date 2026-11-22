@@ -16,6 +16,7 @@ VOICES = "/home/wenningtonda/.local/share/kokoro/voices-v1.0.bin"
 # Termos estrangeiros -> grafia fonética PT-BR (só pra voz; a legenda
 # usa o texto original do roteiro). Adicionar conforme aparecerem.
 FONETICO = {
+    "bluetooth": "blutufi",
     "wi-fi": "uaifai",
     "wifi": "uaifai",
     "app": "ápe",
@@ -26,6 +27,18 @@ FONETICO = {
     "cache": "cachê",
     "flash": "flésh",
     "desktop": "déquitôpe",
+    "hardware": "rarduéri",
+    "software": "softuéri",
+    "chip": "tchip",
+    "mouse": "mauz",
+    "login": "lóguin",
+    "link": "linque",
+    "e-mail": "imeiu",
+    "email": "imeiu",
+    "like": "laiki",
+    "backup": "békape",
+    "bug": "bag",
+    "token": "tôken",
 }
 
 
