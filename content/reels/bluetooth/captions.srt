@@ -1,0 +1,143 @@
+1
+00:00:00,150 --> 00:00:01,985
+Seu fone de ouvido toca música
+
+2
+00:00:01,985 --> 00:00:04,065
+mesmo com uma parede entre ele e o
+
+3
+00:00:04,065 --> 00:00:06,083
+celular. Não tem fio nenhum. Como
+
+4
+00:00:06,083 --> 00:00:07,368
+o Bluetooth faz isso?
+
+5
+00:00:08,168 --> 00:00:10,432
+A resposta é: luz. O Bluetooth usa
+
+6
+00:00:10,432 --> 00:00:12,297
+ondas de rádio de dois ponto
+
+7
+00:00:12,297 --> 00:00:13,895
+quatro giga-hertz. É luz
+
+8
+00:00:13,895 --> 00:00:16,092
+invisível, de baixíssima energia.
+
+9
+00:00:16,092 --> 00:00:18,289
+Ela atravessa plástico, madeira e
+
+10
+00:00:18,289 --> 00:00:20,553
+tecido. Parte rebate, parte passa.
+
+11
+00:00:20,553 --> 00:00:22,684
+Funciona até dentro do bolso. Os
+
+12
+00:00:22,684 --> 00:00:24,549
+únicos inimigos são concreto
+
+13
+00:00:24,549 --> 00:00:25,548
+grosso e metal.
+
+14
+00:00:26,348 --> 00:00:27,990
+Antes de tocar música, os
+
+15
+00:00:27,990 --> 00:00:30,224
+aparelhos se apresentam. O celular
+
+16
+00:00:30,224 --> 00:00:32,326
+busca os dispositivos por perto,
+
+17
+00:00:32,326 --> 00:00:34,560
+encontra seu fone pelo nome e pede
+
+18
+00:00:34,560 --> 00:00:36,597
+conexão. Você confirma uma vez,
+
+19
+00:00:36,597 --> 00:00:38,568
+eles trocam códigos secretos e
+
+20
+00:00:38,568 --> 00:00:40,670
+ficam emparelhados. Ninguém mais
+
+21
+00:00:40,670 --> 00:00:42,050
+escuta essa conversa.
+
+22
+00:00:42,850 --> 00:00:44,735
+E tem um detalhe genial. Nessa
+
+23
+00:00:44,735 --> 00:00:46,305
+mesma faixa operam Wi-Fi,
+
+24
+00:00:46,305 --> 00:00:48,252
+micro-ondas e outros Bluetooth.
+
+25
+00:00:48,252 --> 00:00:50,262
+Todo mundo tentando falar junto.
+
+26
+00:00:50,262 --> 00:00:52,209
+Por isso o Bluetooth nunca fica
+
+27
+00:00:52,209 --> 00:00:54,093
+parado num canal: ele salta de
+
+28
+00:00:54,093 --> 00:00:56,166
+canal em canal, milhares de vezes
+
+29
+00:00:56,166 --> 00:00:58,113
+por segundo. Canal ocupado? Ele
+
+30
+00:00:58,113 --> 00:01:00,123
+pula. Você não percebe, mas nada
+
+31
+00:01:00,123 --> 00:01:00,500
+trava.
+
+32
+00:01:01,300 --> 00:01:03,206
+E já que estamos falando disso:
+
+33
+00:01:03,206 --> 00:01:05,296
+por que será que o Wi-Fi cai justo
+
+34
+00:01:05,296 --> 00:01:06,710
+quando o vizinho liga o
+
+35
+00:01:06,710 --> 00:01:08,308
+micro-ondas? No próximo eu
+
+36
+00:01:08,308 --> 00:01:10,152
+explico. Segue pra não perder.

@@ -1,0 +1,60 @@
+{
+  "slug": "como-o-bluetooth-atravessa-paredes",
+  "type": "reels",
+  "status": "draft",
+  "duration_seconds": 67,
+  "caption": "Seu fone toca música mesmo com uma parede entre ele e o celular. Como? 🎧\n\nO Bluetooth fala por ondas de rádio — luz invisível de baixa energia que atravessa plástico, madeira e tecido.\n\n📡 E TEM MAIS:\n⚡ Primeiro os aparelhos se apresentam e trocam códigos secretos (pareamento)\n🦘 Depois o Bluetooth salta de canal em canal, milhares de vezes por segundo, pra fugir de interferência\n🧱 Os inimigos dele: concreto grosso e metal — ali o sinal enfraquece\n\nNo próximo reel: por que o Wi-Fi cai quando o vizinho liga o micro-ondas 👀\n\nSalva aí e segue pra entender tecnologia do jeito simples.\n\n📚 Fontes: Bluetooth Core Specification v5.4 (Bluetooth SIG — pareamento, segurança e Adaptive Frequency Hopping) e IEEE 802.15.1 (padrão de redes pessoais sem fio).\n\n#wtec #tecnologia #bluetooth #celular #hardware #informatica #dicasdeti #tecnologiadescomplicada",
+  "alt_text": "Reel didático animado sobre como o Bluetooth funciona por dentro: ondas de rádio atravessando barreiras, pareamento entre aparelhos e salto de canais contra interferência.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "scene": "HOOK",
+      "eyebrow": "w.tec_digital",
+      "heading": "Como o Bluetooth atravessa paredes?",
+      "body": "sem fio, sem antena",
+      "voiceover": "Seu fone de ouvido toca música mesmo com uma parede entre ele e o celular. Não tem fio nenhum. Como o Bluetooth faz isso?"
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "scene": "ONDA",
+      "eyebrow": "o truque",
+      "heading": "É luz invisível",
+      "body": "atravessa plástico, madeira, tecido",
+      "voiceover": "A resposta é: luz. O Bluetooth usa ondas de rádio de dois ponto quatro giga-hertz. É luz invisível, de baixíssima energia. Ela atravessa plástico, madeira e tecido. Parte rebate, parte passa. Funciona até dentro do bolso. Os únicos inimigos são concreto grosso e metal."
+    },
+    {
+      "index": 3,
+      "kind": "content",
+      "scene": "PAREAMENTO",
+      "eyebrow": "primeiro contato",
+      "heading": "Primeiro, eles se conhecem",
+      "body": "trocam códigos secretos",
+      "voiceover": "Antes de tocar música, os aparelhos se apresentam. O celular busca os dispositivos por perto, encontra seu fone pelo nome e pede conexão. Você confirma uma vez, eles trocam códigos secretos e ficam emparelhados. Ninguém mais escuta essa conversa."
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "scene": "SALTO",
+      "eyebrow": "a defesa",
+      "heading": "Salta canais pra escapar",
+      "body": "milhares de vezes por segundo",
+      "voiceover": "E tem um detalhe genial. Nessa mesma faixa operam Wi-Fi, micro-ondas e outros Bluetooth. Todo mundo tentando falar junto. Por isso o Bluetooth nunca fica parado num canal: ele salta de canal em canal, milhares de vezes por segundo. Canal ocupado? Ele pula. Você não percebe, mas nada trava."
+    },
+    {
+      "index": 5,
+      "kind": "cta",
+      "scene": "CTA",
+      "eyebrow": "próximo reel",
+      "heading": "Por que o Wi-Fi cai quando o vizinho liga o micro-ondas?",
+      "body": "Segue pra não perder",
+      "voiceover": "E já que estamos falando disso: por que será que o Wi-Fi cai justo quando o vizinho liga o micro-ondas? No próximo eu explico. Segue pra não perder."
+    }
+  ],
+  "sources": [
+    "Bluetooth SIG — Core Specifications v5.4 (pareamento, segurança e Adaptive Frequency Hopping): https://www.bluetooth.com/specifications/specs/",
+    "IEEE 802.15.1 — WPAN, Wireless Personal Area Network communications (padrão de rede pessoal sem fio)"
+  ]
+}
