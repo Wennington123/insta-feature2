@@ -1,0 +1,64 @@
+{
+  "slug": "o-que-acontece-quando-apaga-um-arquivo",
+  "type": "reels",
+  "status": "scheduled",
+  "scheduled_for": "2026-11-29T15:00:00-03:00",
+  "duration_seconds": 60,
+  "media": [
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/o-que-acontece-quando-apaga-um-arquivo.mp4"
+  ],
+  "caption": "Apagou o arquivo. Esvaziou a lixeira. Sumiu, né? 🗑️\n\nNão. O sistema só troca a plaquinha de 'ocupado' por 'livre'. Os bytes continuam lá, intactos, até outro arquivo usar aquele espaço.\n\n🔍 E TEM MAIS:\n💾 Esvaziar a lixeira não varre o disco\n♻️ É por isso que recuperação de arquivos funciona\n🔥 Apagar de verdade = sobrescrever (ou apagar seguro no SSD)\n\nNo próximo reel: por que a foto perde qualidade no WhatsApp 👀\n\nSalva aí e segue pra entender tecnologia do jeito simples.\n\n📚 Fontes: NIST SP 800-88 (Guidelines for Media Sanitization) e documentação da Microsoft sobre o comando cipher.\n\n#wtec #tecnologia #arquivos #backup #windows #informatica #dicasdeti #tecnologiadescomplicada",
+  "alt_text": "Reel didático animado sobre o que acontece ao apagar um arquivo: a lixeira é só um atalho, o sistema marca o espaço como livre sem apagar os bytes, e é por isso que recuperação funciona até o espaço ser sobrescrito.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "scene": "HOOK",
+      "eyebrow": "w.tec_digital",
+      "heading": "Você apagou. Sumiu mesmo?",
+      "body": "spoiler: não",
+      "voiceover": "Apagou uma foto, um arquivo, uma conversa. Sumiu do computador, né? Não. Deixa eu te mostrar o que acontece de verdade."
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "scene": "LIXO",
+      "eyebrow": "a lixeira",
+      "heading": "Esvaziou? Ainda está lá",
+      "body": "lixeira é atalho, não varredura",
+      "voiceover": "Quando você apaga, o arquivo vai pra lixeira. Esvaziou a lixeira? Ele ainda não saiu do disco. O sistema só parou de mostrar ele pra você. Nada foi varrido."
+    },
+    {
+      "index": 3,
+      "kind": "content",
+      "scene": "MARCA",
+      "eyebrow": "o truque",
+      "heading": "Só troca a plaquinha",
+      "body": "livre não quer dizer vazio",
+      "voiceover": "O que acontece de verdade: o sistema marca aquele espaço como livre. Os bytes continuam lá, intactos, até outro arquivo precisar desse lugar. É trocar a plaquinha de ocupado pra vago. A mesa continua cheia."
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "scene": "RECUPERA",
+      "eyebrow": "a prova",
+      "heading": "Por isso dá pra recuperar",
+      "body": "até o espaço ser reescrito",
+      "voiceover": "É por isso que programas de recuperação funcionam: eles leem o que a plaquinha diz que é vago, mas que ainda não foi reescrito. E apagar de verdade exige sobrescrever, ou usar o apagar seguro do SSD."
+    },
+    {
+      "index": 5,
+      "kind": "cta",
+      "scene": "CTA",
+      "eyebrow": "próximo reel",
+      "heading": "Por que a foto perde qualidade no WhatsApp?",
+      "body": "Segue pra não perder",
+      "voiceover": "No próximo reel: por que a foto perde qualidade quando você manda no WhatsApp. Segue pra não perder, e salva esse pra explicar pra alguém."
+    }
+  ],
+  "sources": [
+    "NIST SP 800-88 — Guidelines for Media Sanitization (por que apagar lógico não destrói os dados): https://csrc.nist.gov/publications/detail/sp/800-88/rev-1/final",
+    "Documentação da Microsoft — comando cipher /w (sobrescritura de espaço livre no Windows)"
+  ]
+}

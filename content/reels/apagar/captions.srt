@@ -1,0 +1,111 @@
+1
+00:00:00,150 --> 00:00:02,220
+Apagou uma foto, um arquivo, uma
+
+2
+00:00:02,220 --> 00:00:04,419
+conversa. Sumiu do computador, né?
+
+3
+00:00:04,419 --> 00:00:06,360
+Não. Deixa eu te mostrar o que
+
+4
+00:00:06,360 --> 00:00:07,654
+acontece de verdade.
+
+5
+00:00:08,454 --> 00:00:10,501
+Quando você apaga, o arquivo vai
+
+6
+00:00:10,501 --> 00:00:12,548
+pra lixeira. Esvaziou a lixeira?
+
+7
+00:00:12,548 --> 00:00:14,468
+Ele ainda não saiu do disco. O
+
+8
+00:00:14,468 --> 00:00:16,451
+sistema só parou de mostrar ele
+
+9
+00:00:16,451 --> 00:00:18,179
+pra você. Nada foi varrido.
+
+10
+00:00:18,979 --> 00:00:20,823
+O que acontece de verdade: o
+
+11
+00:00:20,823 --> 00:00:22,931
+sistema marca aquele espaço como
+
+12
+00:00:22,931 --> 00:00:24,841
+livre. Os bytes continuam lá,
+
+13
+00:00:24,841 --> 00:00:26,619
+intactos, até outro arquivo
+
+14
+00:00:26,619 --> 00:00:28,727
+precisar desse lugar. É trocar a
+
+15
+00:00:28,727 --> 00:00:30,835
+plaquinha de ocupado pra vago. A
+
+16
+00:00:30,835 --> 00:00:32,152
+mesa continua cheia.
+
+17
+00:00:32,952 --> 00:00:34,614
+É por isso que programas de
+
+18
+00:00:34,614 --> 00:00:36,708
+recuperação funcionam: eles leem o
+
+19
+00:00:36,708 --> 00:00:38,616
+que a plaquinha diz que é vago,
+
+20
+00:00:38,616 --> 00:00:40,709
+mas que ainda não foi reescrito. E
+
+21
+00:00:40,709 --> 00:00:42,125
+apagar de verdade exige
+
+22
+00:00:42,125 --> 00:00:43,972
+sobrescrever, ou usar o apagar
+
+23
+00:00:43,972 --> 00:00:44,834
+seguro do SSD.
+
+24
+00:00:45,634 --> 00:00:47,497
+No próximo reel: por que a foto
+
+25
+00:00:47,497 --> 00:00:49,480
+perde qualidade quando você manda
+
+26
+00:00:49,480 --> 00:00:51,524
+no WhatsApp. Segue pra não perder,
+
+27
+00:00:51,524 --> 00:00:53,267
+e salva esse pra explicar pra
+
+28
+00:00:53,267 --> 00:00:53,687
+alguém.
