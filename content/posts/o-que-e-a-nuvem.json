@@ -1,0 +1,64 @@
+{
+  "slug": "o-que-e-a-nuvem",
+  "type": "reels",
+  "status": "scheduled",
+  "scheduled_for": "2026-11-25T12:00:00-03:00",
+  "duration_seconds": 70,
+  "media": [
+    "https://cdn.jsdelivr.net/gh/Wennington123/insta-feature2@main/content/reels/o-que-e-a-nuvem.mp4"
+  ],
+  "caption": "Sua foto 'está na nuvem'. Aponta pra ela no céu. 🤔\n\nA nuvem não existe: é o computador de outra pessoa. Quando você sobe um arquivo, ele viaja pela internet e cai num disco dentro de um prédio cheio de servidores.\n\n📁 E TEM MAIS:\n💾 Não existe um arquivo só — há cópias em prédios diferentes\n🔥 Disco queimou? A cópia assume no mesmo segundo\n📶 Sem internet, sem acesso — e conta invadida é disco alheio invadido\n\nNuvem é prático, mas é confiança. Não é mágica.\n\nNo próximo reel: por que a internet cai quando chove 👀\n\nSalva aí e segue pra entender tecnologia do jeito simples.\n\n📚 Fontes: NIST — The NIST Definition of Cloud Computing (SP 800-145) e documentação pública de provedores de nuvem sobre replicação entre regiões.\n\n#wtec #tecnologia #nuvem #backup #googlefotos #informatica #dicasdeti #tecnologiadescomplicada",
+  "alt_text": "Reel didático animado sobre o que é a nuvem de verdade: o arquivo viaja pela internet até um servidor, existe em cópias espalhadas em prédios diferentes e depende de acesso e confiança.",
+  "is_ai_generated": true,
+  "slides": [
+    {
+      "index": 1,
+      "kind": "cover",
+      "scene": "HOOK",
+      "eyebrow": "w.tec_digital",
+      "heading": "Sua foto está 'na nuvem'... onde?",
+      "body": "sem mágica",
+      "voiceover": "Suas fotos, seus documentos, tudo salvo 'na nuvem'. Aponta pra ela no céu. Pois é: a nuvem não existe. Então onde os seus arquivos ficam de verdade?"
+    },
+    {
+      "index": 2,
+      "kind": "content",
+      "scene": "DISCO",
+      "eyebrow": "a verdade",
+      "heading": "É o disco de outra pessoa",
+      "body": "um prédio cheio de servidores",
+      "voiceover": "A nuvem é o computador de outra pessoa. Quando você sobe um arquivo, ele viaja pela internet e cai num disco rígido dentro de um prédio cheio de servidores. Sem mágica: um HD de outra pessoa guarda a sua foto."
+    },
+    {
+      "index": 3,
+      "kind": "content",
+      "scene": "COPIA",
+      "eyebrow": "o segredo",
+      "heading": "Existem cópias espalhadas",
+      "body": "um disco queima, a cópia assume",
+      "voiceover": "E o segredo é que não existe um arquivo só. A empresa mantém cópias em prédios diferentes, às vezes em estados diferentes. Um disco queima? A cópia assume no mesmo segundo. Por isso a nuvem quase nunca perde os seus dados."
+    },
+    {
+      "index": 4,
+      "kind": "content",
+      "scene": "CUIDADO",
+      "eyebrow": "o outro lado",
+      "heading": "É confiança, não mágica",
+      "body": "sem internet, sem acesso",
+      "voiceover": "Mas lembra: o arquivo agora mora no computador de outra pessoa. Sem internet, sem acesso. Conta invadida, disco alheio invadido. Nuvem é prático, mas é confiança. Não é mágica."
+    },
+    {
+      "index": 5,
+      "kind": "cta",
+      "scene": "CTA",
+      "eyebrow": "próximo reel",
+      "heading": "Por que a internet cai quando chove?",
+      "body": "Segue pra não perder",
+      "voiceover": "No próximo reel: por que a internet cai quando chove, e por que a fibra reclama menos. Segue pra não perder, e salva esse pra explicar pra alguém."
+    }
+  ],
+  "sources": [
+    "NIST — The NIST Definition of Cloud Computing, Special Publication 800-145: https://csrc.nist.gov/publications/detail/sp/800-145/final",
+    "Documentação pública de provedores de nuvem (Google Cloud, AWS) — replicação entre regiões e durabilidade de dados"
+  ]
+}
